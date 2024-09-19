@@ -1,0 +1,1648 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>								
+					form#stickyelements-form input::-moz-placeholder{
+						color: #4F4F4F;
+					} 
+					form#stickyelements-form input::-ms-input-placeholder{
+						color: #4F4F4F					} 
+					form#stickyelements-form input::-webkit-input-placeholder{
+						color: #4F4F4F					}
+					form#stickyelements-form input::placeholder{
+						color: #4F4F4F					}
+					form#stickyelements-form textarea::placeholder {
+						color: #4F4F4F					}
+					form#stickyelements-form textarea::-moz-placeholder {
+						color: #4F4F4F					}
+			</style>
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+<title>Mikrokontroler ESP32 - UR</title>
+<link rel="canonical" href="https://raharja.ac.id/2021/11/16/mikrokontroler-esp32-3/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Mikrokontroler ESP32" />
+<meta property="og:description" content="Sejarah Mikrokontroler ESP32 ESP32 adalah salah satu keluarga mikrokontroler yang dikenalkan dan dikembangkan oleh Espressif System. ESP32 ini merupakan penerus dari mikrokontroller ESP8266. Mikrokontroler satu ini compatible dengan Arduino IDE. Pada mikrokontroler ini sudah tersedia modul WiFi dan ditambah dengan BLE (Bluetooth Low Energy) dalam chip sehingga sangat mendukung dan dapat menjadi pilihan bagus untuk [&hellip;]" />
+<meta property="og:url" content="https://raharja.ac.id/2021/11/16/mikrokontroler-esp32-3/" />
+<meta property="og:site_name" content="UR" />
+<meta property="article:publisher" content="https://www.facebook.com/Campus.Raharja/" />
+<meta property="article:published_time" content="2021-11-16T16:45:31+00:00" />
+<meta property="og:image" content="https://www.ubuy.com.my/productimg/?image=aHR0cHM6Ly9tLm1lZGlhLWFtYXpvbi5jb20vaW1hZ2VzL0kvNjFSaXhTU3RHQkwuX1NMMTAwMF8uanBn.jpg" />
+<meta name="author" content="sulistio" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:creator" content="@campus_raharja" />
+<meta name="twitter:site" content="@campus_raharja" />
+<meta name="twitter:label1" content="Written by" />
+<meta name="twitter:data1" content="sulistio" />
+<meta name="twitter:label2" content="Est. reading time" />
+<meta name="twitter:data2" content="3 minutes" />
+<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://raharja.ac.id/2021/11/16/mikrokontroler-esp32-3/#article","isPartOf":{"@id":"https://raharja.ac.id/2021/11/16/mikrokontroler-esp32-3/"},"author":{"name":"sulistio","@id":"https://raharja.ac.id/#/schema/person/d7c2aad0aa73f4ab6b0dcb2c060564c4"},"headline":"Mikrokontroler ESP32","datePublished":"2021-11-16T16:45:31+00:00","dateModified":"2021-11-16T16:45:31+00:00","mainEntityOfPage":{"@id":"https://raharja.ac.id/2021/11/16/mikrokontroler-esp32-3/"},"wordCount":509,"commentCount":0,"publisher":{"@id":"https://raharja.ac.id/#organization"},"image":{"@id":"https://raharja.ac.id/2021/11/16/mikrokontroler-esp32-3/#primaryimage"},"thumbnailUrl":"https://www.ubuy.com.my/productimg/?image=aHR0cHM6Ly9tLm1lZGlhLWFtYXpvbi5jb20vaW1hZ2VzL0kvNjFSaXhTU3RHQkwuX1NMMTAwMF8uanBn.jpg","articleSection":["Home"],"inLanguage":"en-US","potentialAction":[{"@type":"CommentAction","name":"Comment","target":["https://raharja.ac.id/2021/11/16/mikrokontroler-esp32-3/#respond"]}]},{"@type":"WebPage","@id":"https://raharja.ac.id/2021/11/16/mikrokontroler-esp32-3/","url":"https://raharja.ac.id/2021/11/16/mikrokontroler-esp32-3/","name":"Mikrokontroler ESP32 - UR","isPartOf":{"@id":"https://raharja.ac.id/#website"},"primaryImageOfPage":{"@id":"https://raharja.ac.id/2021/11/16/mikrokontroler-esp32-3/#primaryimage"},"image":{"@id":"https://raharja.ac.id/2021/11/16/mikrokontroler-esp32-3/#primaryimage"},"thumbnailUrl":"https://www.ubuy.com.my/productimg/?image=aHR0cHM6Ly9tLm1lZGlhLWFtYXpvbi5jb20vaW1hZ2VzL0kvNjFSaXhTU3RHQkwuX1NMMTAwMF8uanBn.jpg","datePublished":"2021-11-16T16:45:31+00:00","dateModified":"2021-11-16T16:45:31+00:00","breadcrumb":{"@id":"https://raharja.ac.id/2021/11/16/mikrokontroler-esp32-3/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://raharja.ac.id/2021/11/16/mikrokontroler-esp32-3/"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://raharja.ac.id/2021/11/16/mikrokontroler-esp32-3/#primaryimage","url":"https://www.ubuy.com.my/productimg/?image=aHR0cHM6Ly9tLm1lZGlhLWFtYXpvbi5jb20vaW1hZ2VzL0kvNjFSaXhTU3RHQkwuX1NMMTAwMF8uanBn.jpg","contentUrl":"https://www.ubuy.com.my/productimg/?image=aHR0cHM6Ly9tLm1lZGlhLWFtYXpvbi5jb20vaW1hZ2VzL0kvNjFSaXhTU3RHQkwuX1NMMTAwMF8uanBn.jpg"},{"@type":"BreadcrumbList","@id":"https://raharja.ac.id/2021/11/16/mikrokontroler-esp32-3/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Universitas Raharja","item":"https://raharja.ac.id/"},{"@type":"ListItem","position":2,"name":"Mikrokontroler ESP32"}]},{"@type":"WebSite","@id":"https://raharja.ac.id/#website","url":"https://raharja.ac.id/","name":"UNIVERSITAS RAHARJA","description":"Choice Campus for the better Future","publisher":{"@id":"https://raharja.ac.id/#organization"},"alternateName":"UR","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://raharja.ac.id/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https://raharja.ac.id/#organization","name":"Universitas Raharja","alternateName":"UR","url":"https://raharja.ac.id/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://raharja.ac.id/#/schema/logo/image/","url":"https://raharja.ac.id/wp-content/uploads/2019/12/cropped-LOGO-UNIVERSITAS-RAHARJA-1-2.png","contentUrl":"https://raharja.ac.id/wp-content/uploads/2019/12/cropped-LOGO-UNIVERSITAS-RAHARJA-1-2.png","width":512,"height":512,"caption":"Universitas Raharja"},"image":{"@id":"https://raharja.ac.id/#/schema/logo/image/"},"sameAs":["https://www.facebook.com/Campus.Raharja/","https://x.com/campus_raharja","https://www.instagram.com/universitasraharja/","https://www.linkedin.com/company/universitas-raharja/","https://www.youtube.com/channel/UCjWfk136wljsVBGwt9foWcA","https://widuri.raharja.info/"]},{"@type":"Person","@id":"https://raharja.ac.id/#/schema/person/d7c2aad0aa73f4ab6b0dcb2c060564c4","name":"sulistio","image":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://raharja.ac.id/#/schema/person/image/","url":"https://secure.gravatar.com/avatar/633cd0282a878d978e101a6d11677932?s=96&d=robohash&r=g","contentUrl":"https://secure.gravatar.com/avatar/633cd0282a878d978e101a6d11677932?s=96&d=robohash&r=g","caption":"sulistio"}}]}</script>
+
+<link rel="dns-prefetch" href="//www.googletagmanager.com" />
+<link rel="dns-prefetch" href="//fonts.googleapis.com" />
+<link rel="alternate" type="application/rss+xml" title="UR &raquo; Feed" href="https://raharja.ac.id/feed/" />
+<link rel="alternate" type="application/rss+xml" title="UR &raquo; Comments Feed" href="https://raharja.ac.id/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="UR &raquo; Mikrokontroler ESP32 Comments Feed" href="https://raharja.ac.id/2021/11/16/mikrokontroler-esp32-3/feed/" />
+<script type="6db9a64c75103a5c900ed178-text/javascript">
+/* <![CDATA[ */
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/raharja.ac.id\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.5.5"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83d\udc26\u200d\u2b1b","\ud83d\udc26\u200b\u2b1b")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+/* ]]> */
+</script>
+<link rel="stylesheet" id="et-frontend-style-css" href="https://raharja.ac.id/wp-content/plugins/everest-tab-lite/assets/css//et-style.css?ver=2.0.5" type="text/css" media="all" />
+<link rel="stylesheet" id="etl-block-editor-css" href="https://raharja.ac.id/wp-content/plugins/everest-tab-lite/includes/etl-block/etl-block.css?ver=2.0.5" type="text/css" media="all" />
+<link rel="stylesheet" id="et_fontawesome_style-css" href="https://raharja.ac.id/wp-content/plugins/everest-tab-lite/assets/css/available_icons/font-awesome/font-awesome.min.css?ver=2.0.5" type="text/css" media="all" />
+<link rel="stylesheet" id="et-animate-style-css" href="https://raharja.ac.id/wp-content/plugins/everest-tab-lite/assets/css/animate.css?ver=2.0.5" type="text/css" media="all" />
+<link rel="stylesheet" id="pt-cv-public-style-css" href="https://raharja.ac.id/wp-content/plugins/content-views-query-and-display-post-page/public/assets/css/cv.css?ver=3.8.0" type="text/css" media="all" />
+<link rel="stylesheet" id="sbi_styles-css" href="https://raharja.ac.id/wp-content/plugins/instagram-feed/css/sbi-styles.min.css?ver=6.3.1" type="text/css" media="all" />
+<style id="wp-emoji-styles-inline-css" type="text/css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link rel="stylesheet" id="wp-block-library-css" href="https://raharja.ac.id/wp-includes/css/dist/block-library/style.min.css?ver=6.5.5" type="text/css" media="all" />
+<style id="pdfemb-pdf-embedder-viewer-style-inline-css" type="text/css">
+.wp-block-pdfemb-pdf-embedder-viewer{max-width:none}
+
+</style>
+<style id="classic-theme-styles-inline-css" type="text/css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id="global-styles-inline-css" type="text/css">
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}body .is-layout-grid{display: grid;}body .is-layout-grid > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel="stylesheet" id="redux-extendify-styles-css" href="https://raharja.ac.id/wp-content/plugins/redux-framework/redux-core/assets/css/extendify-utilities.css?ver=4.4.14" type="text/css" media="all" />
+<link rel="stylesheet" id="pb_animate-css" href="https://raharja.ac.id/wp-content/plugins/ays-popup-box/public/css/animate.css?ver=4.5.0" type="text/css" media="all" />
+<link rel="stylesheet" id="contact-form-7-css" href="https://raharja.ac.id/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.9.5" type="text/css" media="all" />
+<style id="dominant-color-styles-inline-css" type="text/css">
+img[data-dominant-color]:not(.has-transparency) { background-color: var(--dominant-color); }
+</style>
+<link rel="stylesheet" id="sp-news-public-css" href="https://raharja.ac.id/wp-content/plugins/sp-news-and-widget/assets/css/wpnw-public.css?ver=4.9" type="text/css" media="all" />
+<link rel="stylesheet" id="wpsm_tabs_r-font-awesome-front-css" href="https://raharja.ac.id/wp-content/plugins/tabs-responsive/assets/css/font-awesome/css/font-awesome.min.css?ver=6.5.5" type="text/css" media="all" />
+<link rel="stylesheet" id="wpsm_tabs_r_bootstrap-front-css" href="https://raharja.ac.id/wp-content/plugins/tabs-responsive/assets/css/bootstrap-front.css?ver=6.5.5" type="text/css" media="all" />
+<link rel="stylesheet" id="wpsm_tabs_r_animate-css" href="https://raharja.ac.id/wp-content/plugins/tabs-responsive/assets/css/animate.css?ver=6.5.5" type="text/css" media="all" />
+<link rel="stylesheet" id="extendify-utility-styles-css" href="https://raharja.ac.id/wp-content/plugins/extendify/public/build/utility-minimum.css?ver=6.5.5" type="text/css" media="all" />
+<style id="qeducato-google-fonts-css" media="all">/* cyrillic */
+@font-face {
+  font-family: 'Jost';
+  font-style: italic;
+  font-weight: 100;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/jost/v15/92zUtBhPNqw73oHt5D4hTxM.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Jost';
+  font-style: italic;
+  font-weight: 100;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/jost/v15/92zUtBhPNqw73oHt7j4hTxM.woff2) format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Jost';
+  font-style: italic;
+  font-weight: 100;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/jost/v15/92zUtBhPNqw73oHt4D4h.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Jost';
+  font-style: italic;
+  font-weight: 200;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/jost/v15/92zUtBhPNqw73oHt5D4hTxM.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Jost';
+  font-style: italic;
+  font-weight: 200;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/jost/v15/92zUtBhPNqw73oHt7j4hTxM.woff2) format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Jost';
+  font-style: italic;
+  font-weight: 200;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/jost/v15/92zUtBhPNqw73oHt4D4h.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Jost';
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/jost/v15/92zUtBhPNqw73oHt5D4hTxM.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Jost';
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/jost/v15/92zUtBhPNqw73oHt7j4hTxM.woff2) format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Jost';
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/jost/v15/92zUtBhPNqw73oHt4D4h.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Jost';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/jost/v15/92zUtBhPNqw73oHt5D4hTxM.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Jost';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/jost/v15/92zUtBhPNqw73oHt7j4hTxM.woff2) format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Jost';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/jost/v15/92zUtBhPNqw73oHt4D4h.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Jost';
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/jost/v15/92zUtBhPNqw73oHt5D4hTxM.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Jost';
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/jost/v15/92zUtBhPNqw73oHt7j4hTxM.woff2) format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Jost';
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/jost/v15/92zUtBhPNqw73oHt4D4h.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Jost';
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/jost/v15/92zUtBhPNqw73oHt5D4hTxM.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Jost';
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/jost/v15/92zUtBhPNqw73oHt7j4hTxM.woff2) format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Jost';
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/jost/v15/92zUtBhPNqw73oHt4D4h.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Jost';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/jost/v15/92zUtBhPNqw73oHt5D4hTxM.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Jost';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/jost/v15/92zUtBhPNqw73oHt7j4hTxM.woff2) format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Jost';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/jost/v15/92zUtBhPNqw73oHt4D4h.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Jost';
+  font-style: italic;
+  font-weight: 800;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/jost/v15/92zUtBhPNqw73oHt5D4hTxM.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Jost';
+  font-style: italic;
+  font-weight: 800;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/jost/v15/92zUtBhPNqw73oHt7j4hTxM.woff2) format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Jost';
+  font-style: italic;
+  font-weight: 800;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/jost/v15/92zUtBhPNqw73oHt4D4h.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Jost';
+  font-style: italic;
+  font-weight: 900;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/jost/v15/92zUtBhPNqw73oHt5D4hTxM.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Jost';
+  font-style: italic;
+  font-weight: 900;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/jost/v15/92zUtBhPNqw73oHt7j4hTxM.woff2) format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Jost';
+  font-style: italic;
+  font-weight: 900;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/jost/v15/92zUtBhPNqw73oHt4D4h.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/jost/v15/92zatBhPNqw73oDd4iYl.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/jost/v15/92zatBhPNqw73ord4iYl.woff2) format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/jost/v15/92zatBhPNqw73oTd4g.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/jost/v15/92zatBhPNqw73oDd4iYl.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/jost/v15/92zatBhPNqw73ord4iYl.woff2) format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/jost/v15/92zatBhPNqw73oTd4g.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/jost/v15/92zatBhPNqw73oDd4iYl.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/jost/v15/92zatBhPNqw73ord4iYl.woff2) format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/jost/v15/92zatBhPNqw73oTd4g.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/jost/v15/92zatBhPNqw73oDd4iYl.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/jost/v15/92zatBhPNqw73ord4iYl.woff2) format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/jost/v15/92zatBhPNqw73oTd4g.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/jost/v15/92zatBhPNqw73oDd4iYl.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/jost/v15/92zatBhPNqw73ord4iYl.woff2) format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/jost/v15/92zatBhPNqw73oTd4g.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/jost/v15/92zatBhPNqw73oDd4iYl.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/jost/v15/92zatBhPNqw73ord4iYl.woff2) format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/jost/v15/92zatBhPNqw73oTd4g.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/jost/v15/92zatBhPNqw73oDd4iYl.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/jost/v15/92zatBhPNqw73ord4iYl.woff2) format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/jost/v15/92zatBhPNqw73oTd4g.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/jost/v15/92zatBhPNqw73oDd4iYl.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/jost/v15/92zatBhPNqw73ord4iYl.woff2) format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/jost/v15/92zatBhPNqw73oTd4g.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/jost/v15/92zatBhPNqw73oDd4iYl.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/jost/v15/92zatBhPNqw73ord4iYl.woff2) format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/jost/v15/92zatBhPNqw73oTd4g.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+</style>
+<link rel="stylesheet" id="bootstrap-css" href="https://raharja.ac.id/wp-content/themes/qeducato/inc/assets/css/bootstrap.min.css?ver=6.5.5" type="text/css" media="all" />
+<link rel="stylesheet" id="animate-css" href="https://raharja.ac.id/wp-content/themes/qeducato/inc/assets/css/animate.min.css?ver=6.5.5" type="text/css" media="all" />
+<link rel="stylesheet" id="magnific-popup-css" href="https://raharja.ac.id/wp-content/themes/qeducato/inc/assets/css/magnific-popup.css?ver=6.5.5" type="text/css" media="all" />
+<link rel="stylesheet" id="fontawesome-all-css" href="https://raharja.ac.id/wp-content/themes/qeducato/inc/assets/fontawesome/css/all.min.css?ver=6.5.5" type="text/css" media="all" />
+<link rel="stylesheet" id="dripicons-css" href="https://raharja.ac.id/wp-content/themes/qeducato/inc/assets/css/dripicons.css?ver=6.5.5" type="text/css" media="all" />
+<link rel="stylesheet" id="slick-css" href="https://raharja.ac.id/wp-content/themes/qeducato/inc/assets/css/slick.css?ver=6.5.5" type="text/css" media="all" />
+<link rel="stylesheet" id="meanmenu-css" href="https://raharja.ac.id/wp-content/themes/qeducato/inc/assets/css/meanmenu.css?ver=6.5.5" type="text/css" media="all" />
+<link rel="stylesheet" id="qeducato-default-css" href="https://raharja.ac.id/wp-content/themes/qeducato/inc/assets/css/default.css?ver=6.5.5" type="text/css" media="all" />
+<link rel="stylesheet" id="qeducato-style-css" href="https://raharja.ac.id/wp-content/themes/qeducato/inc/assets/css/style.css?ver=6.5.5" type="text/css" media="all" />
+<link rel="stylesheet" id="qeducato-responsive-css" href="https://raharja.ac.id/wp-content/themes/qeducato/inc/assets/css/responsive.css?ver=6.5.5" type="text/css" media="all" />
+<link rel="stylesheet" id="recent-posts-widget-with-thumbnails-public-style-css" href="https://raharja.ac.id/wp-content/plugins/recent-posts-widget-with-thumbnails/public.css?ver=7.1.1" type="text/css" media="all" />
+<link rel="stylesheet" id="tablepress-default-css" href="https://raharja.ac.id/wp-content/plugins/tablepress/css/build/default.css?ver=2.3.1" type="text/css" media="all" />
+<link rel="stylesheet" id="__EPYT__style-css" href="https://raharja.ac.id/wp-content/plugins/youtube-embed-plus/styles/ytprefs.min.css?ver=14.2.1.2" type="text/css" media="all" />
+<style id="__EPYT__style-inline-css" type="text/css">
+
+                .epyt-gallery-thumb {
+                        width: 33.333%;
+                }
+                
+                         @media (min-width:0px) and (max-width: 768px) {
+                            .epyt-gallery-rowbreak {
+                                display: none;
+                            }
+                            .epyt-gallery-allthumbs[class*="epyt-cols"] .epyt-gallery-thumb {
+                                width: 100% !important;
+                            }
+                          }
+</style>
+<style id="mystickyelements-google-fonts-css" media="all">/* latin-ext */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/poppins/v21/pxiEyp8kv8JHgFVrJJnecmNE.woff2) format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/poppins/v21/pxiEyp8kv8JHgFVrJJfecg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/poppins/v21/pxiByp8kv8JHgFVrLGT9Z1JlFc-K.woff2) format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/poppins/v21/pxiByp8kv8JHgFVrLGT9Z1xlFQ.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/poppins/v21/pxiByp8kv8JHgFVrLEj6Z1JlFc-K.woff2) format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/poppins/v21/pxiByp8kv8JHgFVrLEj6Z1xlFQ.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/poppins/v21/pxiByp8kv8JHgFVrLCz7Z1JlFc-K.woff2) format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/poppins/v21/pxiByp8kv8JHgFVrLCz7Z1xlFQ.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+</style>
+<link rel="stylesheet" id="font-awesome-css-css" href="https://raharja.ac.id/wp-content/plugins/mystickyelements/css/font-awesome.min.css?ver=2.1.7" type="text/css" media="all" />
+<link rel="stylesheet" id="mystickyelements-front-css-css" href="https://raharja.ac.id/wp-content/plugins/mystickyelements/css/mystickyelements-front.min.css?ver=2.1.7" type="text/css" media="all" />
+<link rel="stylesheet" id="intl-tel-input-css" href="https://raharja.ac.id/wp-content/plugins/mystickyelements/intl-tel-input-src/build/css/intlTelInput.css?ver=2.1.7" type="text/css" media="all" />
+<script type="6db9a64c75103a5c900ed178-text/javascript" src="https://raharja.ac.id/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="6db9a64c75103a5c900ed178-text/javascript" src="https://raharja.ac.id/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script type="6db9a64c75103a5c900ed178-text/javascript" src="https://raharja.ac.id/wp-content/plugins/everest-tab-lite/assets/js/frontend/et-frontend-script.js?ver=2.0.5" id="et-frontend-script-js"></script>
+<script type="6db9a64c75103a5c900ed178-text/javascript" id="ays-pb-js-extra">
+/* <![CDATA[ */
+var pbLocalizeObj = {"ajax":"https:\/\/raharja.ac.id\/wp-admin\/admin-ajax.php","seconds":"seconds","thisWillClose":"This will close in","icons":{"close_icon":"<svg class=\"ays_pb_material_close_icon\" xmlns=\"https:\/\/www.w3.org\/2000\/svg\" height=\"36px\" viewBox=\"0 0 24 24\" width=\"36px\" fill=\"#000000\" alt=\"Pop-up Close\"><path d=\"M0 0h24v24H0z\" fill=\"none\"\/><path d=\"M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z\"\/><\/svg>","close_circle_icon":"<svg class=\"ays_pb_material_close_circle_icon\" xmlns=\"https:\/\/www.w3.org\/2000\/svg\" height=\"24\" viewBox=\"0 0 24 24\" width=\"36\" alt=\"Pop-up Close\"><path d=\"M0 0h24v24H0z\" fill=\"none\"\/><path d=\"M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm5 13.59L15.59 17 12 13.41 8.41 17 7 15.59 10.59 12 7 8.41 8.41 7 12 10.59 15.59 7 17 8.41 13.41 12 17 15.59z\"\/><\/svg>","volume_up_icon":"<svg class=\"ays_pb_fa_volume\" xmlns=\"https:\/\/www.w3.org\/2000\/svg\" height=\"24\" viewBox=\"0 0 24 24\" width=\"36\"><path d=\"M0 0h24v24H0z\" fill=\"none\"\/><path d=\"M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z\"\/><\/svg>","volume_mute_icon":"<svg xmlns=\"https:\/\/www.w3.org\/2000\/svg\" height=\"24\" viewBox=\"0 0 24 24\" width=\"24\"><path d=\"M0 0h24v24H0z\" fill=\"none\"\/><path d=\"M7 9v6h4l5 5V4l-5 5H7z\"\/><\/svg>"}};
+/* ]]> */
+</script>
+<script type="6db9a64c75103a5c900ed178-text/javascript" src="https://raharja.ac.id/wp-content/plugins/ays-popup-box/public/js/ays-pb-public.js?ver=4.5.0" id="ays-pb-js"></script>
+
+
+<script type="6db9a64c75103a5c900ed178-text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-47HY2LQ9FP" id="google_gtagjs-js" async></script>
+<script type="6db9a64c75103a5c900ed178-text/javascript" id="google_gtagjs-js-after">
+/* <![CDATA[ */
+window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
+gtag("set","linker",{"domains":["raharja.ac.id"]});
+gtag("js", new Date());
+gtag("set", "developer_id.dZTNiMT", true);
+gtag("config", "G-47HY2LQ9FP");
+/* ]]> */
+</script>
+
+<script type="6db9a64c75103a5c900ed178-text/javascript" id="__ytprefs__-js-extra">
+/* <![CDATA[ */
+var _EPYT_ = {"ajaxurl":"https:\/\/raharja.ac.id\/wp-admin\/admin-ajax.php","security":"5373bb53dd","gallery_scrolloffset":"20","eppathtoscripts":"https:\/\/raharja.ac.id\/wp-content\/plugins\/youtube-embed-plus\/scripts\/","eppath":"https:\/\/raharja.ac.id\/wp-content\/plugins\/youtube-embed-plus\/","epresponsiveselector":"[\"iframe.__youtube_prefs__\",\"iframe[src*='youtube.com']\",\"iframe[src*='youtube-nocookie.com']\",\"iframe[data-ep-src*='youtube.com']\",\"iframe[data-ep-src*='youtube-nocookie.com']\",\"iframe[data-ep-gallerysrc*='youtube.com']\"]","epdovol":"1","version":"14.2.1.2","evselector":"iframe.__youtube_prefs__[src], iframe[src*=\"youtube.com\/embed\/\"], iframe[src*=\"youtube-nocookie.com\/embed\/\"]","ajax_compat":"","maxres_facade":"eager","ytapi_load":"light","pause_others":"","stopMobileBuffer":"1","facade_mode":"","not_live_on_channel":"","vi_active":"","vi_js_posttypes":[]};
+/* ]]> */
+</script>
+<script type="6db9a64c75103a5c900ed178-text/javascript" src="https://raharja.ac.id/wp-content/plugins/youtube-embed-plus/scripts/ytprefs.min.js?ver=14.2.1.2" id="__ytprefs__-js"></script>
+<link rel="https://api.w.org/" href="https://raharja.ac.id/wp-json/" /><link rel="alternate" type="application/json" href="https://raharja.ac.id/wp-json/wp/v2/posts/17236" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://raharja.ac.id/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.5.5" />
+<link rel="shortlink" href="https://raharja.ac.id/?p=17236" />
+<link rel="alternate" type="application/json+oembed" href="https://raharja.ac.id/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fraharja.ac.id%2F2021%2F11%2F16%2Fmikrokontroler-esp32-3%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://raharja.ac.id/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fraharja.ac.id%2F2021%2F11%2F16%2Fmikrokontroler-esp32-3%2F&#038;format=xml" />
+<meta name="generator" content="Site Kit by Google 1.132.0" /><meta name="generator" content="performance-lab 3.1.0; plugins: auto-sizes, dominant-color-images, embed-optimizer, speculation-rules, webp-uploads">
+<meta name="generator" content="Redux 4.4.14" /><meta name="generator" content="auto-sizes 1.0.2">
+<meta name="generator" content="dominant-color-images 1.1.1">
+<meta name="generator" content="embed-optimizer 0.1.2">
+<meta name="generator" content="webp-uploads 1.1.1">
+<script type="6db9a64c75103a5c900ed178-text/javascript">
+			( function() {
+				window.onpageshow = function( event ) {
+					// Defined window.wpforms means that a form exists on a page.
+					// If so and back/forward button has been clicked,
+					// force reload a page to prevent the submit button state stuck.
+					if ( typeof window.wpforms !== 'undefined' && event.persisted ) {
+						window.location.reload();
+					}
+				};
+			}() );
+		</script>
+<meta name="generator" content="speculation-rules 1.3.0">
+<meta name="generator" content="Elementor 3.21.8; features: e_optimized_assets_loading, e_optimized_css_loading, e_font_icon_svg, additional_custom_breakpoints, e_lazyload; settings: css_print_method-external, google_font-enabled, font_display-auto">
+<style>
+				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload),
+				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload) * {
+					background-image: none !important;
+				}
+				@media screen and (max-height: 1024px) {
+					.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload),
+					.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload) * {
+						background-image: none !important;
+					}
+				}
+				@media screen and (max-height: 640px) {
+					.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload),
+					.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload) * {
+						background-image: none !important;
+					}
+				}
+			</style>
+<style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #ffff00; }
+</style>
+<link rel="icon" href="https://raharja.ac.id/wp-content/uploads/2019/12/cropped-LOGO-UNIVERSITAS-RAHARJA-1-2-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://raharja.ac.id/wp-content/uploads/2019/12/cropped-LOGO-UNIVERSITAS-RAHARJA-1-2-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://raharja.ac.id/wp-content/uploads/2019/12/cropped-LOGO-UNIVERSITAS-RAHARJA-1-2-180x180.png" />
+<meta name="msapplication-TileImage" content="https://raharja.ac.id/wp-content/uploads/2019/12/cropped-LOGO-UNIVERSITAS-RAHARJA-1-2-270x270.png" />
+<style type="text/css" id="wp-custom-css">
+			/* FIX TABLE INSIDE TABS */
+.tab-content > .active {
+	overflow-x: auto;	
+}
+
+/* HIDE FEATURED IMGAGE ON POST */
+.bsingle__post-thumb {
+display: none;
+}
+		</style>
+<style id="qeducato_data-dynamic-css" title="dynamic-css" class="redux-options-output">body,.widget_categories a{color:#6e6e6e;}.site-content{background-color:#ffffff;}.breadcrumb-area{background-color:#20282E;background-image:url('https://raharja.ac.id/wp-content/uploads/2023/03/bdrc-bg.png');}.footer-bg{background-color:#00173c;background-image:url('https://raharja.ac.id/wp-content/uploads/2023/03/footer-bg.png');}.footer-social a:hover,.contact-form .btn,.about-area .btn:hover::before,.bsingle__content .blog__btn .btn,.s-about-content .footer-social a:hover,.project-detail .project-info li .btn,.testimonial-active2 .slick-dots .slick-active button,.slider-content h2 span::after,.home-blog-active .slick-arrow, .home-blog-active2 .slick-arrow,.button-group button.active,.breadcrumb,.f-widget-title h2::before, .footer-widget .widgettitle::before,.copyright-wrap,.f-contact i,.cta-area .btn,.event-content .date,.blog-thumb2 .date-home,.step-box .date-box,.about-content2 li .ano,.class-active .slick-arrow,.courses-content .cat,.about-text,.services-box07:hover, .services-box07.active,.second-header::before,.second-header-btn .btn,.slider-content h5::after,.slider-active .slider-btn .btn,.post__tag ul li a:hover,.services-categories li a::after,.brochures-box .inner,.home-blog-active .slick-arrow:hover, .home-blog-active2 .slick-arrow:hover,.portfolio .col3 .grid-item .box a::after,.comment-form .submit,#scrollUp,.search-form .search-submit, .wp-block-search .wp-block-search__button,.top-btn,.widget-social a:hover,.comment-form .submit:hover,.services-08-item:hover .readmore,#scrollUp:hover,.gallery-image figcaption .span::before,.team-thumb .dropdown .xbtn,.blog-content2 .date-home,.f-cta-icon i,.contact-bg02 .btn.ss-btn.active{background-color:#004f24;}.event03 .event-content .time i,.faq-wrap .card-header h2 button::after,.bsingle__content h2:hover a,.testimonial-active2 .ta-info span,.services-box a:hover,.main-menu ul li:hover > a,.main-menu ul li a::after,.project-detail .project-info li .icon,.main-menu ul li:hover > a,.cta-title h2 span,.recent-blog-footer span,.b-meta i,.section-title h5,.event-content .time strong,.courses-content a.readmore,.about-title h5,.header-cta ul li i,blockquote footer,.pricing-body li::before,.pricing-box2.active .price-count h2, .pricing-box2.active .pricing-head h2,.header-three .main-menu .sub-menu li a:hover, .menu .children li a:hover,.footer-link ul li a:hover,.comment-text .avatar-name span,.team-area-content span,.team-area-content li .icon i,.header-social a,a:hover,.services-08-thumb.glyph-icon i,.gallery-image figcaption .span,.team-info span,.team-info h4 a:hover,.single-team:hover .team-info h4,.testimonial-active .slick-arrow,.blog-btn a,.bsingle__post .video-p .video-i,.bsingle__content .meta-info ul li i,.about-content li .icon i{color:#004f24;}.slider-active .slider-btn .btn,.contact-form .btn,.faq-btn,.about-area .btn:hover,.menu .sub-menu, .menu .children,.second-header-btn .btn,.cta-area .btn,.slider-active .slider-btn .btn,.post__tag ul li a:hover,.pricing-box2.active,.menu .children,.sidebar-widget .widgettitle,.tag-cloud-link:hover,.widget-social a:hover,.services-08-item:hover .readmore,.team-info .text,.blog-btn a,.contact-bg02 .btn.ss-btn.active{border-color:#004f24;}.btn.ss-btn.active,.second-header a, .second-header span,.comment-form .submit,.search-form .search-submit,.wp-block-search .wp-block-search__button,.team-thumb .dropdown .xbtn,#scrollUp,.cta-title h2,.footer-widget .widgettitle, .footer-widget .cat-item, .footer-widget .widget ul li,.copyright-wrap .text,.f-cta-icon i,.btn-style-one{color:#fff;}.event-item:hover .event-content,.header-three .second-header,.project-detail .info-column .inner-column2 h3,.btn:hover::before,.conterdown,.s-about-content .footer-social a,.about-area .btn{background-color:#0c9300;}{color:#0c9300;}.about-area .btn,.second-header-btn .btn:hover{border-color:#0c9300;}.blog-area3 .blog-thumb2 .date-home{background-color:#4ea9b4;}{color:#4ea9b4;}{border-color:#4ea9b4;}.copyright-wrap .text,.btn-style-one{background-color:#232323;}h1, h2, h3, h4, h5, h6{color:#232323;}</style><style id="wpforms-css-vars-root">
+				:root {
+					--wpforms-field-border-radius: 3px;
+--wpforms-field-border-style: solid;
+--wpforms-field-border-size: 1px;
+--wpforms-field-background-color: #ffffff;
+--wpforms-field-border-color: rgba( 0, 0, 0, 0.25 );
+--wpforms-field-border-color-spare: rgba( 0, 0, 0, 0.25 );
+--wpforms-field-text-color: rgba( 0, 0, 0, 0.7 );
+--wpforms-field-menu-color: #ffffff;
+--wpforms-label-color: rgba( 0, 0, 0, 0.85 );
+--wpforms-label-sublabel-color: rgba( 0, 0, 0, 0.55 );
+--wpforms-label-error-color: #d63637;
+--wpforms-button-border-radius: 3px;
+--wpforms-button-border-style: none;
+--wpforms-button-border-size: 1px;
+--wpforms-button-background-color: #066aab;
+--wpforms-button-border-color: #066aab;
+--wpforms-button-text-color: #ffffff;
+--wpforms-page-break-color: #066aab;
+--wpforms-background-image: none;
+--wpforms-background-position: center center;
+--wpforms-background-repeat: no-repeat;
+--wpforms-background-size: cover;
+--wpforms-background-width: 100px;
+--wpforms-background-height: 100px;
+--wpforms-background-color: rgba( 0, 0, 0, 0 );
+--wpforms-background-url: none;
+--wpforms-container-padding: 0px;
+--wpforms-container-border-style: none;
+--wpforms-container-border-width: 1px;
+--wpforms-container-border-color: #000000;
+--wpforms-container-border-radius: 3px;
+--wpforms-field-size-input-height: 43px;
+--wpforms-field-size-input-spacing: 15px;
+--wpforms-field-size-font-size: 16px;
+--wpforms-field-size-line-height: 19px;
+--wpforms-field-size-padding-h: 14px;
+--wpforms-field-size-checkbox-size: 16px;
+--wpforms-field-size-sublabel-spacing: 5px;
+--wpforms-field-size-icon-size: 1;
+--wpforms-label-size-font-size: 16px;
+--wpforms-label-size-line-height: 19px;
+--wpforms-label-size-sublabel-font-size: 14px;
+--wpforms-label-size-sublabel-line-height: 17px;
+--wpforms-button-size-font-size: 17px;
+--wpforms-button-size-height: 41px;
+--wpforms-button-size-padding-h: 15px;
+--wpforms-button-size-margin-top: 10px;
+--wpforms-container-shadow-size-box-shadow: none;
+
+				}
+			</style></head>
+<body class="post-template-default single single-post postid-17236 single-format-standard custom-background elementor-default elementor-kit-16647">
+<header class="header-area header-three">
+
+<div class="header-top second-header d-none d-md-block">
+<div class="container">
+<div class="row align-items-center">
+<div class="col-lg-4 col-md-4 d-none d-lg-block ">
+<div class="header-social">
+<span>
+Follow us:-
+<a href="https://id-id.facebook.com/Campus.Raharja/" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+<a href="https://www.instagram.com/universitasraharja/" title="instagram"><i class="fab fa-instagram"></i></a>
+<a href="https://twitter.com/campus_raharja/" title="Twitter"><i class="fab fa-twitter"></i></a>
+<a href="https://www.youtube.com/channel/UCjWfk136wljsVBGwt9foWcA" title="Youtube"><i class="fab fa-youtube"></i></a> </span>
+
+</div>
+</div>
+<div class="col-lg-8 col-md-8 d-none d-lg-block text-right">
+<div class="header-cta">
+<ul>
+<li>
+<div class="call-box">
+<div class="icon">
+<img src="https://raharja.ac.id/wp-content/uploads/2023/05/telepon.png" alt="https://raharja.ac.id/wp-content/uploads/2023/05/telepon.png">
+</div>
+<div class="text">
+<span>Daftar Mahasiswa Baru</span> <strong><a href="https://web.whatsapp.com/send?phone=+628159146745&text=Hai *Universitas Raharja*, saya dapat rekomendasi dari *https://raharja.ac.id/*, saya butuh informasi lebih banyak lagi. Terimakasih UR.">0811-914-6745</a></strong>
+</div>
+</div>
+</li>
+<li>
+<div class="call-box">
+<div class="icon">
+<img src="https://raharja.ac.id/wp-content/uploads/2023/05/Email-Internet-PNG.png" alt="https://raharja.ac.id/wp-content/uploads/2023/05/Email-Internet-PNG.png">
+</div>
+<div class="text">
+<span>Email Pendaftaran</span> <strong><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3a4a4a57587a485b525b48505b1453545c55">[email&#160;protected]</a></strong> </div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="header-sticky" class="menu-area">
+<div class="container">
+<div class="row align-items-center">
+<div class="col-xl-3 col-lg-3">
+<div class="logo">
+
+
+<a href="https://raharja.ac.id/" class="navbar-brand logo-black">
+
+<img src="https://raharja.ac.id/wp-content/uploads/2020/10/logo-teks-ur-hijau.png" alt="UR" title="Choice Campus for the better Future" />
+</a>
+</div>
+</div>
+<div class="col-xl-6 col-lg-6">
+<div class="main-menu text-right text-xl-right">
+<nav id="mobile-menu">
+<div id="cssmenu" class="menu-menu-educat-container"><ul id="menu-menu-educat" class="menu"><li id="menu-item-19308" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-19308"><a href="https://raharja.ac.id">HOME</a></li>
+<li id="menu-item-19309" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-19309"><a href="#">PROFIL</a>
+<ul class="sub-menu">
+<li id="menu-item-19313" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19313"><a href="https://raharja.ac.id/visi-misi-universitas-raharja/">VISI, MISI, TUJUAN DAN SASARAN</a></li>
+<li id="menu-item-19332" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19332"><a href="https://raharja.ac.id/sambutan-ketua-yayasan-nirwana-nusantara/">SAMBUTAN KETUA YAYASAN</a></li>
+<li id="menu-item-19331" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19331"><a href="https://raharja.ac.id/sambutan-rektor-universitas-raharja/">SAMBUTAN REKTOR</a></li>
+<li id="menu-item-19333" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19333"><a href="https://raharja.ac.id/struktur-organisasi/">STRUKTUR ORGANISASI</a></li>
+<li id="menu-item-19334" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19334"><a href="https://raharja.ac.id/11816-2/">ROADMAP UR 2019</a></li>
+<li id="menu-item-21006" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21006"><a href="https://raharja.ac.id/sejarah-universitas-raharja/">SEJARAH UNIVERSITAS RAHARJA</a></li>
+<li id="menu-item-19336" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19336"><a href="https://raharja.ac.id/identitas/">IDENTITAS</a></li>
+</ul>
+</li>
+<li id="menu-item-19310" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19310"><a href="https://raharja.ac.id/program-studi/">PROGRAM STUDI</a></li>
+<li id="menu-item-19311" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-19311"><a href="#">LINK</a>
+<ul class="sub-menu">
+<li id="menu-item-19560" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19560"><a href="https://raharja.ac.id/kalender-akademik-2023-2024/">KALENDER AKADEMIK</a></li>
+<li id="menu-item-20292" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20292"><a href="https://raharja.ac.id/raharja-career-ganjil-ta-2023-2024/">RC Ganjil TA. 2023/2024</a></li>
+<li id="menu-item-19556" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19556"><a href="https://raharja.ac.id/rme/">RME+</a></li>
+<li id="menu-item-19558" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19558"><a href="http://36.88.25.253/auth/login">SISTER DOSEN</a></li>
+<li id="menu-item-19559" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19559"><a href="https://raharja.ac.id/dosen/">INFO DOSEN</a></li>
+<li id="menu-item-19561" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19561"><a href="https://raharja.ac.id/rpu/">RPU</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-gtranslate menu-item-has-children notranslate"><a href="#" data-gt-lang="id" class="gt-current-wrapper notranslate"><img src="https://raharja.ac.id/wp-content/plugins/gtranslate/flags/svg/id.svg" width="16" height="16" alt="id" loading="lazy"> <span>Indonesian</span></a><ul class="dropdown-menu sub-menu"><li class="menu-item menu-item-gtranslate-child"><a href="#" data-gt-lang="en" class="notranslate"><img src="https://raharja.ac.id/wp-content/plugins/gtranslate/flags/svg/en.svg" width="16" height="16" alt="en" loading="lazy"> <span>English</span></a></li><li class="menu-item menu-item-gtranslate-child"><a href="#" data-gt-lang="id" class="gt-current-lang notranslate"><img src="https://raharja.ac.id/wp-content/plugins/gtranslate/flags/svg/id.svg" width="16" height="16" alt="id" loading="lazy"> <span>Indonesian</span></a></li></ul></li></ul></div> </nav>
+</div>
+</div>
+<div class="col-xl-3 col-lg-3 text-right d-none d-lg-block text-right text-xl-right">
+<div class="login">
+<ul>
+<li><a href="#" class="menu-tigger"><i class="fal fa-search"></i></a></li>
+<li>
+<div class="second-header-btn">
+<a href="https://pmb.raharja.ac.id" class="btn">INFO PMB</a> </div>
+</li>
+</ul>
+</div>
+</div>
+<div class="col-12">
+<div class="mobile-menu"></div>
+</div>
+</div>
+</div>
+</div>
+</header>
+
+
+<div class="offcanvas-menu">
+<span class="menu-close"><i class="fal fa-times"></i></span>
+<form role="search" method="get" id="searchform" class="searchform" action="https://raharja.ac.id/">
+<input type="text" name="s" id="search" value placeholder="Search" />
+<button><i class="fal fa-search"></i></button>
+</form>
+<div id="cssmenu3" class="menu-one-page-menu-container">
+<div class="menu"><ul>
+<li class="page_item page-item-24356"><a href="https://raharja.ac.id/__trashed-3/">A. Rachmat Hadis</a></li>
+<li class="page_item page-item-12579"><a href="https://raharja.ac.id/abdimas/">ABDIMAS</a></li>
+<li class="page_item page-item-19108"><a href="https://raharja.ac.id/0413077003-abdul-hamid-arribathi/">Abdul Hamid Arribathi</a></li>
+<li class="page_item page-item-19117"><a href="https://raharja.ac.id/0403085902-abdul-hayat/">Abdul Hayat</a></li>
+<li class="page_item page-item-19122"><a href="https://raharja.ac.id/0412028802-abert-tandilintin/">Abert Tandilintin</a></li>
+<li class="page_item page-item-19258"><a href="https://raharja.ac.id/about-us/">About Us</a></li>
+<li class="page_item page-item-12046"><a href="https://raharja.ac.id/account-2/">Account</a></li>
+<li class="page_item page-item-12022"><a href="https://raharja.ac.id/account/">Account</a></li>
+<li class="page_item page-item-24242"><a href="https://raharja.ac.id/0312017504-achmad-rachmat-s/">Achmad Rachmat S</a></li>
+<li class="page_item page-item-24326"><a href="https://raharja.ac.id/adam-faturahman/">Adam Faturahman</a></li>
+<li class="page_item page-item-17807"><a href="https://raharja.ac.id/0409099302-ade-setiadi/">Ade Setiadi</a></li>
+<li class="page_item page-item-18084"><a href="https://raharja.ac.id/0428059001-ageng-setiani-rafika/">Ageng Setiani Rafika</a></li>
+<li class="page_item page-item-24723"><a href="https://raharja.ac.id/0410048707-ahmad-roihan/">Ahmad Roihan</a></li>
+<li class="page_item page-item-24435"><a href="https://raharja.ac.id/0417118301-ajay-supriadi/">Ajay Supriadi</a></li>
+<li class="page_item page-item-16620"><a href="https://raharja.ac.id/akreditasi/">Akreditasi</a></li>
+<li class="page_item page-item-16264"><a href="https://raharja.ac.id/akuntansi/">Akuntansi &#8211; FEB</a></li>
+<li class="page_item page-item-17745"><a href="https://raharja.ac.id/0408108203-al-husain/">Al Husain</a></li>
+<li class="page_item page-item-18812"><a href="https://raharja.ac.id/0402037101-al-bahra-bin-ladjamudin/">Al-Bahra Bin Ladjamudin</a></li>
+<li class="page_item page-item-111"><a href="https://raharja.ac.id/alternate-no-featured/">Alternate No Featured</a></li>
+<li class="page_item page-item-110"><a href="https://raharja.ac.id/alternate-with-featured/">Alternate With Featured</a></li>
+<li class="page_item page-item-11834"><a href="https://raharja.ac.id/alumni-raharja/">Alumni Raharja</a></li>
+<li class="page_item page-item-12471"><a href="https://raharja.ac.id/alumni/">Alumni Universitas Raharja</a></li>
+<li class="page_item page-item-3082"><a href="https://raharja.ac.id/amcr/">AMCR</a></li>
+<li class="page_item page-item-24176"><a href="https://raharja.ac.id/0408069001-andri-cahyo-purnomo/">Andri Cahyo Purnomo</a></li>
+<li class="page_item page-item-24133"><a href="https://raharja.ac.id/0420049001-angelia-efrida-purba/">Angelia Efrida Purba</a></li>
+<li class="page_item page-item-17581"><a href="https://raharja.ac.id/0420097301-anita-bawaiqki-wandanaya/">Anita Bawaiqki Wandanaya</a></li>
+<li class="page_item page-item-24352"><a href="https://raharja.ac.id/anur-rahmah-tia-wulandari/">Anur Rahmah Tia Wulandari</a></li>
+<li class="page_item page-item-4571"><a href="https://raharja.ac.id/arah-kebijakan-manajemen/">Arah Kebijakan Manajemen</a></li>
+<li class="page_item page-item-10490"><a href="https://raharja.ac.id/archive-2/">Archive</a></li>
+<li class="page_item page-item-18750"><a href="https://raharja.ac.id/0422019103-ari-asmawati/">Ari Asmawati</a></li>
+<li class="page_item page-item-24281"><a href="https://raharja.ac.id/0425127107-arief-saptono/">Arief Saptono</a></li>
+<li class="page_item page-item-24158"><a href="https://raharja.ac.id/0410058902-arif-marjuki/">Arif Marjuki</a></li>
+<li class="page_item page-item-18068"><a href="https://raharja.ac.id/0425058205-aris/">Aris</a></li>
+<li class="page_item page-item-17676"><a href="https://raharja.ac.id/0323036002-aris-martono/">Aris Martono</a></li>
+<li class="page_item page-item-17762"><a href="https://raharja.ac.id/0423078604-arkan-nur-robby/">Arkan Nur Robby</a></li>
+<li class="page_item page-item-18816"><a href="https://raharja.ac.id/0406086704-arko-djajadi/">Arko Djajadi</a></li>
+<li class="page_item page-item-18742"><a href="https://raharja.ac.id/0404067201-arsi-yulianjani/">Arsi Yulianjani</a></li>
+<li class="page_item page-item-24779"><a href="https://raharja.ac.id/bayu-pramono-2/">Bayu Pramono</a></li>
+<li class="page_item page-item-24556"><a href="https://raharja.ac.id/0429068901-bayu-pramono/">Bayu Pramono</a></li>
+<li class="page_item page-item-16673"><a href="https://raharja.ac.id/beasiswa/">BEASISWA</a></li>
+<li class="page_item page-item-12448"><a href="https://raharja.ac.id/berita/">BERITA</a></li>
+<li class="page_item page-item-70 current_page_parent"><a href="https://raharja.ac.id/blog/">Blog</a></li>
+<li class="page_item page-item-1198"><a href="https://raharja.ac.id/blog-1-column/">Blog 1 Column</a></li>
+<li class="page_item page-item-1199"><a href="https://raharja.ac.id/blog-2-column/">Blog 2 Column</a></li>
+<li class="page_item page-item-1201"><a href="https://raharja.ac.id/blog-3-column/">Blog 3 Column</a></li>
+<li class="page_item page-item-10882"><a href="https://raharja.ac.id/blog-full-wide/">Blog Full Width</a></li>
+<li class="page_item page-item-1195"><a href="https://raharja.ac.id/blog-half-wide/">Blog Full Width</a></li>
+<li class="page_item page-item-10881"><a href="https://raharja.ac.id/blog-full-left-sidebar/">Blog Left Sidebar</a></li>
+<li class="page_item page-item-1196"><a href="https://raharja.ac.id/blog-half-left-sidebar/">Blog Left Sidebar</a></li>
+<li class="page_item page-item-10880"><a href="https://raharja.ac.id/blog-full-right-sidebar/">Blog Right Sidebar</a></li>
+<li class="page_item page-item-1197"><a href="https://raharja.ac.id/blog-half-right-sidebar/">Blog Right Sidebar</a></li>
+<li class="page_item page-item-12891"><a href="https://raharja.ac.id/blog-tri/">blog-tri</a></li>
+<li class="page_item page-item-12187"><a href="https://raharja.ac.id/calendar-2/">Calendar</a></li>
+<li class="page_item page-item-23150"><a href="https://raharja.ac.id/karir-fakultas-ekonomi-bisnis/">Career Dev. Center Fakultas Ekonomi dan Bisnis</a></li>
+<li class="page_item page-item-211"><a href="https://raharja.ac.id/cart/">Cart</a></li>
+<li class="page_item page-item-17818"><a href="https://raharja.ac.id/0406068906-chaidir-kurnia-thoullah-soedaryono/">Chaidir Kurnia Thoullah Soedaryono</a></li>
+<li class="page_item page-item-12049"><a href="https://raharja.ac.id/change/">Change Password</a></li>
+<li class="page_item page-item-212"><a href="https://raharja.ac.id/checkout/">Checkout</a></li>
+<li class="page_item page-item-24693"><a href="https://raharja.ac.id/0410017701-christien-setiya-kesumawati/">Christien Setiya Kesumawati</a></li>
+<li class="page_item page-item-24766"><a href="https://raharja.ac.id/christien-setiya-kesumawati-2/">Christien Setiya Kesumawati</a></li>
+<li class="page_item page-item-1452"><a href="https://raharja.ac.id/clients/">Clients</a></li>
+<li class="page_item page-item-19269"><a href="https://raharja.ac.id/contact-2/">Contact</a></li>
+<li class="page_item page-item-139"><a href="https://raharja.ac.id/contact/">Contact</a></li>
+<li class="page_item page-item-1260"><a href="https://raharja.ac.id/contact-style-1/">Contact (Style 1)</a></li>
+<li class="page_item page-item-1261"><a href="https://raharja.ac.id/contact-style-2/">Contact (Style 2)</a></li>
+<li class="page_item page-item-24318"><a href="https://raharja.ac.id/0311127402-d-dedy-prasetya-k/">D Dedy Prasetya K</a></li>
+<li class="page_item page-item-15906"><a href="https://raharja.ac.id/daftar-pemenang-raharja-career-2021/">DAFTAR PEMENANG RAHARJA CAREER 2021</a></li>
+<li class="page_item page-item-17754"><a href="https://raharja.ac.id/0413068803-danang-rifai/">Danang Rifai</a></li>
+<li class="page_item page-item-3090"><a href="https://raharja.ac.id/dasa-nilai-luhur-pribadi-raharja/">Dasa Nilai Luhur Pribadi Raharja</a></li>
+<li class="page_item page-item-17941"><a href="https://raharja.ac.id/dashboard-karya-ilmiah-dosen-ur/">Dashboard Karya Ilmiah Dosen UR</a></li>
+<li class="page_item page-item-18738"><a href="https://raharja.ac.id/0427028301-dede-cahyadi/">Dede Cahyadi</a></li>
+<li class="page_item page-item-18130"><a href="https://raharja.ac.id/0408128203-dedeh-supriyanti/">Dedeh Supriyanti</a></li>
+<li class="page_item page-item-17685"><a href="https://raharja.ac.id/0405078103-deden-roni-nurjaman/">Deden Roni Nurjaman</a></li>
+<li class="page_item page-item-24322"><a href="https://raharja.ac.id/0425019101-deden-rustiana/">Deden Rustiana</a></li>
+<li class="page_item page-item-24827"><a href="https://raharja.ac.id/16016-dedi-martono/">Dedi Martono</a></li>
+<li class="page_item page-item-24270"><a href="https://raharja.ac.id/0417108101-dendy-jonas-managas/">Dendy Jonas Managas</a></li>
+<li class="page_item page-item-17664"><a href="https://raharja.ac.id/0404127604-denny-andwiyan/">Denny Andwiyan</a></li>
+<li class="page_item page-item-18079"><a href="https://raharja.ac.id/0406049204-desy-apriani/">Desy Apriani</a></li>
+<li class="page_item page-item-17692"><a href="https://raharja.ac.id/0408128603-dewi-immaniar-desrianti/">Dewi Immaniar Desrianti</a></li>
+<li class="page_item page-item-14570"><a href="https://raharja.ac.id/dokumen-fakultas/">DOKUMEN FAKULTAS</a></li>
+<li class="page_item page-item-12539"><a href="https://raharja.ac.id/dosen/">Dosen</a></li>
+<li class="page_item page-item-24141"><a href="https://raharja.ac.id/0410036703-eduard-hotman-purba/">Eduard Hotman Purba</a></li>
+<li class="page_item page-item-18759"><a href="https://raharja.ac.id/0418099301-eka-purnama-harahap/">Eka Purnama Harahap</a></li>
+<li class="page_item page-item-10502"><a href="https://raharja.ac.id/video-on-left/">Ekonomi &#038; Bisnis</a></li>
+<li class="page_item page-item-24137"><a href="https://raharja.ac.id/0416066901-endang-sunandar/">Endang Sunandar</a></li>
+<li class="page_item page-item-24111"><a href="https://raharja.ac.id/0419027404-era-era-hia/">Era Era Hia</a></li>
+<li class="page_item page-item-17768"><a href="https://raharja.ac.id/0421029002-erick-febriyanto/">Erick Febriyanto</a></li>
+<li class="page_item page-item-18720"><a href="https://raharja.ac.id/0422019202-erna-astriyani/">Erna Astriyani</a></li>
+<li class="page_item page-item-17850"><a href="https://raharja.ac.id/0402037601-euis-nurninawati/">Euis Nurninawati</a></li>
+<li class="page_item page-item-17883"><a href="https://raharja.ac.id/0403028101-euis-sitinur-aisyah/">Euis Sitinur Aisyah</a></li>
+<li class="page_item page-item-12211 page_item_has_children"><a href="https://raharja.ac.id/events/">Events</a>
+<ul class="children">
+<li class="page_item page-item-12213"><a href="https://raharja.ac.id/events/categories/">Categories</a></li>
+<li class="page_item page-item-12212"><a href="https://raharja.ac.id/events/locations/">Locations</a></li>
+<li class="page_item page-item-12215"><a href="https://raharja.ac.id/events/my-bookings/">My Bookings</a></li>
+<li class="page_item page-item-12214"><a href="https://raharja.ac.id/events/tags/">Tags</a></li>
+</ul>
+</li>
+<li class="page_item page-item-12222"><a href="https://raharja.ac.id/events-3/">Events</a></li>
+<li class="page_item page-item-214"><a href="https://raharja.ac.id/event/">Events</a></li>
+<li class="page_item page-item-19265"><a href="https://raharja.ac.id/faq/">Faq</a></li>
+<li class="page_item page-item-3678"><a href="https://raharja.ac.id/faq1-ejournal/">FAQ1 &#8211; Raharja eJournal Centre</a></li>
+<li class="page_item page-item-3680"><a href="https://raharja.ac.id/faq2-ejournal/">FAQ2 &#8211; Raharja eJournal Centre</a></li>
+<li class="page_item page-item-3682"><a href="https://raharja.ac.id/faq3-ejournal/">FAQ3 &#8211; Raharja eJournal Centre</a></li>
+<li class="page_item page-item-3686"><a href="https://raharja.ac.id/faq4-ejournal/">FAQ4 &#8211; Raharja eJournal Centre</a></li>
+<li class="page_item page-item-3688"><a href="https://raharja.ac.id/faq5-ejournal/">FAQ5 &#8211; Raharja eJournal Centre</a></li>
+<li class="page_item page-item-3690"><a href="https://raharja.ac.id/faq6-ejournal/">FAQ6 &#8211; Raharja eJournal Centre</a></li>
+<li class="page_item page-item-3692"><a href="https://raharja.ac.id/faq7-ejournal/">FAQ7 &#8211; Raharja eJournal Centre</a></li>
+<li class="page_item page-item-3694"><a href="https://raharja.ac.id/faq8-ejournal/">FAQ8 &#8211; Raharja eJournal Centre</a></li>
+<li class="page_item page-item-3696"><a href="https://raharja.ac.id/faq9-ejournal/">FAQ9 &#8211; Raharja eJournal Centre</a></li>
+<li class="page_item page-item-24646"><a href="https://raharja.ac.id/24646-2/">Fauzan Manafi Albar</a></li>
+<li class="page_item page-item-24682"><a href="https://raharja.ac.id/0416026701-fauzan-manafi-albar/">Fauzan Manafi Albar</a></li>
+<li class="page_item page-item-12557"><a href="https://raharja.ac.id/feb-strata1/">feb-strata1</a></li>
+<li class="page_item page-item-17835"><a href="https://raharja.ac.id/0423128406-fernando-siboro/">Fernando Siboro</a></li>
+<li class="page_item page-item-18781"><a href="https://raharja.ac.id/0318117902-ferry-sudarto/">Ferry Sudarto</a></li>
+<li class="page_item page-item-17801"><a href="https://raharja.ac.id/0414099401-fifit-alfiah/">Fifit Alfiah</a></li>
+<li class="page_item page-item-12047"><a href="https://raharja.ac.id/forgot/">Forgot Password?</a></li>
+<li class="page_item page-item-12541"><a href="https://raharja.ac.id/fst-diploma/">fst-diploma</a></li>
+<li class="page_item page-item-12556"><a href="https://raharja.ac.id/fst-magister-backup/">FST-MAGISTER-BACKUP</a></li>
+<li class="page_item page-item-14962"><a href="https://raharja.ac.id/fst-sarjana/">FST-SARJANA</a></li>
+<li class="page_item page-item-10643"><a href="https://raharja.ac.id/full-width/">Full Width</a></li>
+<li class="page_item page-item-10488"><a href="https://raharja.ac.id/full-width-slider/">Full Width (Slider)</a></li>
+<li class="page_item page-item-18074"><a href="https://raharja.ac.id/0420018101-giandari-maulani/">Giandari Maulani</a></li>
+<li class="page_item page-item-24310"><a href="https://raharja.ac.id/0421048803-gilang-kartika-hanum/">Gilang Kartika Hanum</a></li>
+<li class="page_item page-item-3351"><a href="https://raharja.ac.id/green-campus-raharja/">Green Campus Raharja</a></li>
+<li class="page_item page-item-24107"><a href="https://raharja.ac.id/0406077104-h-suhada/">H. Suhada</a></li>
+<li class="page_item page-item-24386"><a href="https://raharja.ac.id/2024-05-13-hadirku-bikin-heboh-acara-aptisi-pusat-apa-yang-terjadi/">Hadirku Bikin Heboh Acara Aptisi Pusat, Apa yang Terjadi?</a></li>
+<li class="page_item page-item-24306"><a href="https://raharja.ac.id/0412018404-handy-januar-permana/">Handy Januar Permana</a></li>
+<li class="page_item page-item-17840"><a href="https://raharja.ac.id/0423128406-hardjanto-nusantoro/">Hardjanto Nusantoro</a></li>
+<li class="page_item page-item-24197"><a href="https://raharja.ac.id/0414068704-harfizar/">Harfizar</a></li>
+<li class="page_item page-item-24410"><a href="https://raharja.ac.id/0420057707-haryanto/">Haryanto</a></li>
+<li class="page_item page-item-17873"><a href="https://raharja.ac.id/0404127401-henderi/">Henderi</a></li>
+<li class="page_item page-item-18711"><a href="https://raharja.ac.id/0425018702-hendra-kusumah/">Hendra Kusumah</a></li>
+<li class="page_item page-item-24124"><a href="https://raharja.ac.id/0404069102-hendriyati-haryani/">Hendriyati Haryani</a></li>
+<li class="page_item page-item-24703"><a href="https://raharja.ac.id/0423078604-himawan/">Himawan</a></li>
+<li class="page_item page-item-11846"><a href="https://raharja.ac.id/hjm-raharja/">HJM RAHARJA</a></li>
+<li class="page_item page-item-12477"><a href="https://raharja.ac.id/hmj-hmps/">HMJ-HMPS</a></li>
+<li class="page_item page-item-6 page_item_has_children"><a href="https://raharja.ac.id/home/">Home</a>
+<ul class="children">
+<li class="page_item page-item-3491"><a href="https://raharja.ac.id/home/10-prinsip-dasar/">10 PRINSIP DASAR</a></li>
+</ul>
+</li>
+<li class="page_item page-item-1350"><a href="https://raharja.ac.id/home-header-3/">Home (Header 3)</a></li>
+<li class="page_item page-item-11324"><a href="https://raharja.ac.id/home-header-4/">Home (Header 4)</a></li>
+<li class="page_item page-item-3827"><a href="https://raharja.ac.id/home-coba/">Home Coba</a></li>
+<li class="page_item page-item-72"><a href="https://raharja.ac.id/home-page-02/">Home Page 02</a></li>
+<li class="page_item page-item-74"><a href="https://raharja.ac.id/home-page-03/">Home Page 03</a></li>
+<li class="page_item page-item-15139"><a href="https://raharja.ac.id/how-to-write-essay/">How to Write Essay? </p></a></li>
+<li class="page_item page-item-16675"><a href="https://raharja.ac.id/hubungi-raharja/">HUBUNGI RAHARJA</a></li>
+<li class="page_item page-item-12577"><a href="https://raharja.ac.id/humas/">HUMAS-LEGAL</a></li>
+<li class="page_item page-item-3332"><a href="https://raharja.ac.id/identitas/">Identitas</a></li>
+<li class="page_item page-item-24254"><a href="https://raharja.ac.id/0431126303-ignatius-agus-supriyono/">Ignatius Agus Supriyono</a></li>
+<li class="page_item page-item-18701"><a href="https://raharja.ac.id/0328068301-ilamsyah/">Ilamsyah</a></li>
+<li class="page_item page-item-10504"><a href="https://raharja.ac.id/image-slider/">Image Slider</a></li>
+<li class="page_item page-item-24150"><a href="https://raharja.ac.id/0430059202-imam-aji-santoso/">Imam Aji Santoso</a></li>
+<li class="page_item page-item-18883"><a href="https://raharja.ac.id/0322038603-indra/">Indra</a></li>
+<li class="page_item page-item-18785"><a href="https://raharja.ac.id/0417019102-indri-handayani/">Indri Handayani</a></li>
+<li class="page_item page-item-13590"><a href="https://raharja.ac.id/irps/">irps</a></li>
+<li class="page_item page-item-13599"><a href="https://raharja.ac.id/irps-2/">irps-</a></li>
+<li class="page_item page-item-11772"><a href="https://raharja.ac.id/isi-berita/">isi berita</a></li>
+<li class="page_item page-item-24164"><a href="https://raharja.ac.id/0407058907-isrial/">Isrial</a></li>
+<li class="page_item page-item-24443"><a href="https://raharja.ac.id/0410048504-ita-erliyani/">Ita Erliyani</a></li>
+<li class="page_item page-item-24314"><a href="https://raharja.ac.id/0401018803-janu-ilham-saputro/">Janu Ilham Saputro</a></li>
+<li class="page_item page-item-24155"><a href="https://raharja.ac.id/0429016302-jawahir/">Jawahir</a></li>
+<li class="page_item page-item-17662"><a href="https://raharja.ac.id/0403017602-junaidi/">Junaidi</a></li>
+<li class="page_item page-item-2963"><a href="https://raharja.ac.id/kajur/">Kajur</a></li>
+<li class="page_item page-item-13430"><a href="https://raharja.ac.id/kalender-akademik-ta-20192020/">KALENDER AKADEMIK TA. 2019/2020</a></li>
+<li class="page_item page-item-15101"><a href="https://raharja.ac.id/kalender-akademik-ta-20202021/">KALENDER AKADEMIK TA. 2020/2021</a></li>
+<li class="page_item page-item-16726"><a href="https://raharja.ac.id/kalender-akademik-ta-2021-2022/">Kalender Akademik TA. 2021/2022</a></li>
+<li class="page_item page-item-18362"><a href="https://raharja.ac.id/kalender-akademik-2022-2023/">Kalender Akademik TA. 2022/2023</a></li>
+<li class="page_item page-item-20124"><a href="https://raharja.ac.id/kalender-akademik-2023-2024/">Kalender Akademik TA. 2023/2024</a></li>
+<li class="page_item page-item-17587"><a href="https://raharja.ac.id/karunia-suci-lestari/">Karunia Suci Lestari</a></li>
+<li class="page_item page-item-12573"><a href="https://raharja.ac.id/kepegawaian/">KEPEGAWAIAN</a></li>
+<li class="page_item page-item-18848"><a href="https://raharja.ac.id/kepegawaian-2/">Kepegawaian</a></li>
+<li class="page_item page-item-16648"><a href="https://raharja.ac.id/kerjasama/">Kerjasama</a></li>
+<li class="page_item page-item-3176"><a href="https://raharja.ac.id/keunggulan/">Keunggulan</a></li>
+<li class="page_item page-item-15610"><a href="https://raharja.ac.id/nws/">Keunggulan Universitas Raharja</a></li>
+<li class="page_item page-item-24688"><a href="https://raharja.ac.id/0405056205-khozin-yuliana/">Khozin Yuliana</a></li>
+<li class="page_item page-item-24202"><a href="https://raharja.ac.id/0305037601-dedy-iskandar/">Khozin Yuliana</a></li>
+<li class="page_item page-item-3086"><a href="https://raharja.ac.id/kunci-sukses-raharja/">Kunci Sukses Raharja</a></li>
+<li class="page_item page-item-12576"><a href="https://raharja.ac.id/layanan-informasi/">LAYANAN INFORMASI</a></li>
+<li class="page_item page-item-12941"><a href="https://raharja.ac.id/list-sekprodi/">list-sekprodi</a></li>
+<li class="page_item page-item-12568"><a href="https://raharja.ac.id/lkm/">lkm</a></li>
+<li class="page_item page-item-15216"><a href="https://raharja.ac.id/loginpress/">LoginPress</a></li>
+<li class="page_item page-item-12567"><a href="https://raharja.ac.id/logistik/">logistik</a></li>
+<li class="page_item page-item-3358"><a href="https://raharja.ac.id/logo-raharja/">Logo Raharja</a></li>
+<li class="page_item page-item-12021"><a href="https://raharja.ac.id/logout/">Logout</a></li>
+<li class="page_item page-item-17671"><a href="https://raharja.ac.id/0406018402-lusyani-sunarya/">Lusyani Sunarya</a></li>
+<li class="page_item page-item-17829"><a href="https://raharja.ac.id/0403059101-luthfia-fauzia-dewi-aryanti/">Luthfia Fauzia Dewi Aryanti</a></li>
+<li class="page_item page-item-4593"><a href="https://raharja.ac.id/mading-rpu/">Mading RPU</a></li>
+<li class="page_item page-item-14993"><a href="https://raharja.ac.id/mail-order-brides-costume-secure/">Mail Order Brides Costume &#8211; Secure</a></li>
+<li class="page_item page-item-15763"><a href="https://raharja.ac.id/manajemen-retail/">Manajemen Retail</a></li>
+<li class="page_item page-item-18094"><a href="https://raharja.ac.id/0403038405-mardiana/">Mardiana</a></li>
+<li class="page_item page-item-3364"><a href="https://raharja.ac.id/mars-raharja/">Mars Raharja</a></li>
+<li class="page_item page-item-24665"><a href="https://raharja.ac.id/0404077103-martono/">Martono</a></li>
+<li class="page_item page-item-3094"><a href="https://raharja.ac.id/maskot-raharja/">Maskot Raharja</a></li>
+<li class="page_item page-item-12020"><a href="https://raharja.ac.id/members/">Members</a></li>
+<li class="page_item page-item-24459"><a href="https://raharja.ac.id/0425099004-mintauli-debataraja/">Mintauli Debataraja</a></li>
+<li class="page_item page-item-18796"><a href="https://raharja.ac.id/8985630021-mochamad-heru-riza-chakim/">Mochamad Heru Riza Chakim</a></li>
+<li class="page_item page-item-18903"><a href="https://raharja.ac.id/05090-mohamad-harry-mulya-zein/">Mohamad Harry Mulya Zein</a></li>
+<li class="page_item page-item-18724"><a href="https://raharja.ac.id/0410108207-mohamad-ifran-sanni/">Mohamad Ifran Sanni</a></li>
+<li class="page_item page-item-18888"><a href="https://raharja.ac.id/17009-mohamad-rakhmansyah/">Mohamad Rakhmansyah</a></li>
+<li class="page_item page-item-17928"><a href="https://raharja.ac.id/021001-muhamad-iip-suhaepi/">Muhamad Iip Suhaepi</a></li>
+<li class="page_item page-item-17845"><a href="https://raharja.ac.id/0422108602-muhamad-puad-abdul-haqi/">Muhamad Puad Abdul Haqi</a></li>
+<li class="page_item page-item-17673"><a href="https://raharja.ac.id/0417077907-muhamad-yusup/">Muhamad Yusup</a></li>
+<li class="page_item page-item-24670"><a href="https://raharja.ac.id/0412108802-muhamad-zahruddin/">Muhamad Zahruddin</a></li>
+<li class="page_item page-item-17824"><a href="https://raharja.ac.id/0430068804-muhammad-faisal/">Muhammad Faisal</a></li>
+<li class="page_item page-item-17680"><a href="https://raharja.ac.id/0404047407-muhammad-yusuf-effendy/">Muhammad Yusuf Effendy</a></li>
+<li class="page_item page-item-17962"><a href="https://raharja.ac.id/0419107201-mukti-budiarto/">Mukti Budiarto</a></li>
+<li class="page_item page-item-3170"><a href="https://raharja.ac.id/multiperspektif/">Multiperspektif</a></li>
+<li class="page_item page-item-18089"><a href="https://raharja.ac.id/0410047603-mulyati/">Mulyati</a></li>
+<li class="page_item page-item-12178"><a href="https://raharja.ac.id/my-account-2/">My Account</a></li>
+<li class="page_item page-item-213"><a href="https://raharja.ac.id/my-account/">My Account</a></li>
+<li class="page_item page-item-24404"><a href="https://raharja.ac.id/0424019201-nina-rahayu/">Nina Rahayu</a></li>
+<li class="page_item page-item-18772"><a href="https://raharja.ac.id/0415029601-ninda-lutfiani/">Ninda Lutfiani</a></li>
+<li class="page_item page-item-24195"><a href="https://raharja.ac.id/0420018604-nitema-gulo/">Nitema Gulo</a></li>
+<li class="page_item page-item-18764"><a href="https://raharja.ac.id/0402118507-novi-cholisoh/">Novi Cholisoh</a></li>
+<li class="page_item page-item-17950"><a href="https://raharja.ac.id/0321037903-nur-azizah/">Nur Azizah</a></li>
+<li class="page_item page-item-24189"><a href="https://raharja.ac.id/0425077801-oleh-soleh/">Oleh Soleh</a></li>
+<li class="page_item page-item-19260"><a href="https://raharja.ac.id/our-courses/">Our Courses</a></li>
+<li class="page_item page-item-100"><a href="https://raharja.ac.id/our-event/">Our Event</a></li>
+<li class="page_item page-item-102"><a href="https://raharja.ac.id/our-gallery/">Our Gallery</a></li>
+<li class="page_item page-item-17957"><a href="https://raharja.ac.id/0409077301-padeli/">Padeli</a></li>
+<li class="page_item page-item-16258"><a href="https://raharja.ac.id/page-test/">page test</a></li>
+<li class="page_item page-item-18876"><a href="https://raharja.ac.id/03051087-panca-oktavia-hadi-putra/">Panca Oktavia Hadi Putra</a></li>
+<li class="page_item page-item-12023"><a href="https://raharja.ac.id/password-reset/">Password Reset</a></li>
+<li class="page_item page-item-13433"><a href="https://raharja.ac.id/pedoman-penulisan/">pedoman-penulisan</a></li>
+<li class="page_item page-item-3110"><a href="https://raharja.ac.id/pencapaian/">Pencapaian</a></li>
+<li class="page_item page-item-12474"><a href="https://raharja.ac.id/pmb/">Pendaftaran</a></li>
+<li class="page_item page-item-3477"><a href="https://raharja.ac.id/pengantar/">Pengantar</a></li>
+<li class="page_item page-item-317"><a href="https://raharja.ac.id/penghargaan-adi-award-2020/">Penghargaan ADI Award 2020</a></li>
+<li class="page_item page-item-12588"><a href="https://raharja.ac.id/perpustakaan/">PERPUSTAKAAN</a></li>
+<li class="page_item page-item-3148"><a href="https://raharja.ac.id/peta-lokasi/">Peta Lokasi</a></li>
+<li class="page_item page-item-16507"><a href="https://raharja.ac.id/pmb-news/">PMB News</a></li>
+<li class="page_item page-item-17867"><a href="https://raharja.ac.id/0412045402-po-abas-sunarya/">Po Abas Sunarya</a></li>
+<li class="page_item page-item-106"><a href="https://raharja.ac.id/portfolio-1-column/">Portfolio 1 Column</a></li>
+<li class="page_item page-item-107"><a href="https://raharja.ac.id/portfolio-2-column/">Portfolio 2 Column</a></li>
+<li class="page_item page-item-108"><a href="https://raharja.ac.id/portfolio-3-column/">Portfolio 3 Column</a></li>
+<li class="page_item page-item-109"><a href="https://raharja.ac.id/portfolio-4-column/">Portfolio 4 Column</a></li>
+<li class="page_item page-item-3360"><a href="https://raharja.ac.id/pribadi-raharja/">Pribadi Raharja</a></li>
+<li class="page_item page-item-3165"><a href="https://raharja.ac.id/pribadi-raharja-card/">Pribadi Raharja Card</a></li>
+<li class="page_item page-item-19267"><a href="https://raharja.ac.id/pricing/">Pricing</a></li>
+<li class="page_item page-item-21228"><a href="https://raharja.ac.id/privacy-policy-nipr/">Privacy Policy &#8211; NIPR</a></li>
+<li class="page_item page-item-12050"><a href="https://raharja.ac.id/profile/">Profile</a></li>
+<li class="page_item page-item-18843"><a href="https://raharja.ac.id/profile-dosen-ur/">Profile Dosen UR</a></li>
+<li class="page_item page-item-16638"><a href="https://raharja.ac.id/program-studi/">Program Studi</a></li>
+<li class="page_item page-item-22666"><a href="https://raharja.ac.id/fst-magister/">Program Studi Magister Teknik Informatika</a></li>
+<li class="page_item page-item-18375"><a href="https://raharja.ac.id/18375-2/">Prospek Universitas Raharja 2022- Hari Ke 2</a></li>
+<li class="page_item page-item-16296"><a href="https://raharja.ac.id/pusat-layanan-mahasiswa/">Pusat Layanan Mahasiswa</a></li>
+<li class="page_item page-item-18691"><a href="https://raharja.ac.id/0421029101-qurotul-aini/">Qurotul Aini</a></li>
+<li class="page_item page-item-3247"><a href="https://raharja.ac.id/raharja-career/">Raharja Career</a></li>
+<li class="page_item page-item-15828"><a href="https://raharja.ac.id/raharja-career-2021/">Raharja Career 2021</a></li>
+<li class="page_item page-item-23459"><a href="https://raharja.ac.id/raharja-career-ganjil-ta-2023-2024/">RAHARJA CAREER GANJIL TA. 2023/2024</a></li>
+<li class="page_item page-item-17493"><a href="https://raharja.ac.id/rc-ganjil-2021-2022/">Raharja Career Sem. Ganjil TA. 2021/2022</a></li>
+<li class="page_item page-item-16742"><a href="https://raharja.ac.id/rc-genap-2020-2021/">Raharja Career Sem. Genap TA. 2020/2021</a></li>
+<li class="page_item page-item-19152"><a href="https://raharja.ac.id/rc-ganjil-2022-2023/">RAHARJA CAREER SEMESTER GANJIL TA. 2022/2023</a></li>
+<li class="page_item page-item-18422"><a href="https://raharja.ac.id/rc-genap-2021-2022/">Raharja Career Semester Genap TA. 2021/2022</a></li>
+<li class="page_item page-item-20264"><a href="https://raharja.ac.id/rc-genap-2022-2023/">RAHARJA CAREER SEMESTER GENAP TA. 2022/2023</a></li>
+<li class="page_item page-item-16505"><a href="https://raharja.ac.id/raharja-news/">Raharja News</a></li>
+<li class="page_item page-item-3237"><a href="https://raharja.ac.id/raharja-song/">Raharja Songs</a></li>
+<li class="page_item page-item-24260"><a href="https://raharja.ac.id/0429118101-rano-kurniawan/">Rano Kurniawan</a></li>
+<li class="page_item page-item-12590"><a href="https://raharja.ac.id/rec/">REC</a></li>
+<li class="page_item page-item-12044"><a href="https://raharja.ac.id/register-3/">Register</a></li>
+<li class="page_item page-item-12074"><a href="https://raharja.ac.id/register-4/">Register</a></li>
+<li class="page_item page-item-12011"><a href="https://raharja.ac.id/register-2/">REGISTER</a></li>
+<li class="page_item page-item-12019"><a href="https://raharja.ac.id/register/">Register</a></li>
+<li class="page_item page-item-15127"><a href="https://raharja.ac.id/rpu/">REGISTRASI PERKULIAHAN DAN UJIAN (RPU)</a></li>
+<li class="page_item page-item-12478"><a href="https://raharja.ac.id/tim-rektor-1/">rektor-beranda-1</a></li>
+<li class="page_item page-item-12479"><a href="https://raharja.ac.id/rektor-beranda-2/">rektor-beranda-2</a></li>
+<li class="page_item page-item-21237"><a href="https://raharja.ac.id/remove-nipr-account/">Remove NIPR Account</a></li>
+<li class="page_item page-item-12048"><a href="https://raharja.ac.id/reset/">Reset Password</a></li>
+<li class="page_item page-item-17688"><a href="https://raharja.ac.id/0416048701-ria-wulandari/">Ria Wulandari</a></li>
+<li class="page_item page-item-24451"><a href="https://raharja.ac.id/0416109201-rizka-mukhlisiah/">Rizka Mukhlisiah</a></li>
+<li class="page_item page-item-4615"><a href="https://raharja.ac.id/rme/">RME+</a></li>
+<li class="page_item page-item-11816"><a href="https://raharja.ac.id/11816-2/">ROADMAP UR 2019</a></li>
+<li class="page_item page-item-3079"><a href="https://raharja.ac.id/robo-raharja/">Robo Raharja</a></li>
+<li class="page_item page-item-23698"><a href="https://raharja.ac.id/0416058101-rosdiana/">Rosdiana</a></li>
+<li class="page_item page-item-24439"><a href="https://raharja.ac.id/0416128701-rosmawati-dwi/">Rosmawati Dwi</a></li>
+<li class="page_item page-item-12578"><a href="https://raharja.ac.id/rpu-old/">RPU</a></li>
+<li class="page_item page-item-17683"><a href="https://raharja.ac.id/0418087803-rudy-yandri/">Rudy Yandri</a></li>
+<li class="page_item page-item-17878"><a href="https://raharja.ac.id/0417098402-ruli-supriati/">Ruli Supriati</a></li>
+<li class="page_item page-item-10503"><a href="https://raharja.ac.id/video-image/">Sains &#038; Teknologi</a></li>
+<li class="page_item page-item-3160"><a href="https://raharja.ac.id/sambutan-ketua-yayasan-nirwana-nusantara/">Sambutan Ketua Yayasan Nirwana Nusantara Tangerang</a></li>
+<li class="page_item page-item-3483"><a href="https://raharja.ac.id/sambutan-rektor-universitas-raharja/">Sambutan Rektor Universitas Raharja</a></li>
+<li class="page_item page-item-2"><a href="https://raharja.ac.id/sample-page/">Sample Page</a></li>
+<li class="page_item page-item-10506"><a href="https://raharja.ac.id/sample-page-2/">Sample Page</a></li>
+<li class="page_item page-item-10507"><a href="https://raharja.ac.id/sample-page-2-3-2/">Sample Page</a></li>
+<li class="page_item page-item-19252"><a href="https://raharja.ac.id/sample-page-3/">Sample Page</a></li>
+<li class="page_item page-item-1457"><a href="https://raharja.ac.id/sample-page-2-2/">Sample Page</a></li>
+<li class="page_item page-item-1458"><a href="https://raharja.ac.id/sample-page-2-2-2/">Sample Page</a></li>
+<li class="page_item page-item-10489"><a href="https://raharja.ac.id/sample-page-2-3/">Sample Page</a></li>
+<li class="page_item page-item-17678"><a href="https://raharja.ac.id/0403128301-sandro-alfeno/">Sandro Alfeno</a></li>
+<li class="page_item page-item-24250"><a href="https://raharja.ac.id/0407098401-saryani/">Saryani</a></li>
+<li class="page_item page-item-3067"><a href="https://raharja.ac.id/sejarah-universitas-raharja/">SEJARAH UNIVERSITAS RAHARJA</a></li>
+<li class="page_item page-item-12929"><a href="https://raharja.ac.id/sekprodi/">sekprodi</a></li>
+<li class="page_item page-item-18754"><a href="https://raharja.ac.id/0418048703-selamat-zebua/">Selamat Zebua</a></li>
+<li class="page_item page-item-17775"><a href="https://raharja.ac.id/0419078704-sendy-zul-friandi/">Sendy Zul Friandi</a></li>
+<li class="page_item page-item-210"><a href="https://raharja.ac.id/shop/">Shop</a></li>
+<li class="page_item page-item-293 page_item_has_children"><a href="https://raharja.ac.id/shortcodes/">Shortcodes</a>
+<ul class="children">
+<li class="page_item page-item-834"><a href="https://raharja.ac.id/shortcodes/call-to-action/">Call To Action</a></li>
+<li class="page_item page-item-838"><a href="https://raharja.ac.id/shortcodes/carousel/">Carousel</a></li>
+<li class="page_item page-item-11031"><a href="https://raharja.ac.id/shortcodes/icon-text/">Icon + Text</a></li>
+<li class="page_item page-item-862"><a href="https://raharja.ac.id/shortcodes/images/">Images</a></li>
+<li class="page_item page-item-835"><a href="https://raharja.ac.id/shortcodes/maps/">Maps</a></li>
+<li class="page_item page-item-832"><a href="https://raharja.ac.id/shortcodes/notification-boxes/">Notification Boxes</a></li>
+<li class="page_item page-item-836"><a href="https://raharja.ac.id/shortcodes/portfolio-projects/">Portfolio Projects</a></li>
+<li class="page_item page-item-833"><a href="https://raharja.ac.id/shortcodes/progress-bars/">Progress Bars</a></li>
+<li class="page_item page-item-839"><a href="https://raharja.ac.id/shortcodes/service-boxes/">Service Boxes</a></li>
+<li class="page_item page-item-864"><a href="https://raharja.ac.id/shortcodes/slideshow/">Slideshow</a></li>
+<li class="page_item page-item-840"><a href="https://raharja.ac.id/shortcodes/tabs/">Tabs</a></li>
+<li class="page_item page-item-837"><a href="https://raharja.ac.id/shortcodes/team-members/">Team Members</a></li>
+<li class="page_item page-item-841"><a href="https://raharja.ac.id/shortcodes/toggles/">Toggles</a></li>
+<li class="page_item page-item-1012"><a href="https://raharja.ac.id/shortcodes/video/">Video</a></li>
+</ul>
+</li>
+<li class="page_item page-item-17021"><a href="https://raharja.ac.id/sistem-informasi/">Sistem Informasi-S1</a></li>
+<li class="page_item page-item-20188"><a href="https://raharja.ac.id/sistem-komputer/">Sistem Komputer-S1</a></li>
+<li class="page_item page-item-10493"><a href="https://raharja.ac.id/sitemap/">Sitemap</a></li>
+<li class="page_item page-item-20775"><a href="https://raharja.ac.id/skup-bisnis-digital-universitas-raharja/">SKuP Bisnis Digital Universitas Raharja</a></li>
+<li class="page_item page-item-24392"><a href="https://raharja.ac.id/skup-pengukuhan-gb-prof-dr-henderi-m-kom/">SKuP Pengukuhan GB Prof. Dr. Henderi, M.Kom.</a></li>
+<li class="page_item page-item-12592"><a href="https://raharja.ac.id/spmi/">SPMI</a></li>
+<li class="page_item page-item-18776"><a href="https://raharja.ac.id/0316098001-sri-rahayu/">Sri Rahayu</a></li>
+<li class="page_item page-item-3206"><a href="https://raharja.ac.id/statistik/">Statistik</a></li>
+<li class="page_item page-item-16624"><a href="https://raharja.ac.id/statistik-racid/">Statistik RACID</a></li>
+<li class="page_item page-item-3201"><a href="https://raharja.ac.id/struktur-organisasi/">STRUKTUR ORGANISASI</a></li>
+<li class="page_item page-item-18397"><a href="https://raharja.ac.id/struktur-organisasi-universitas-raharja/">Struktur Organisasi UR</a></li>
+<li class="page_item page-item-17944"><a href="https://raharja.ac.id/0410047105-sudaryono/">Sudaryono</a></li>
+<li class="page_item page-item-17576"><a href="https://raharja.ac.id/0406047601-sugeng-santoso/">Sugeng Santoso</a></li>
+<li class="page_item page-item-17669"><a href="https://raharja.ac.id/0402106101-sugeng-widada/">Sugeng Widada</a></li>
+<li class="page_item page-item-24180"><a href="https://raharja.ac.id/0410047603-sugina/">Sugina</a></li>
+<li class="page_item page-item-18801"><a href="https://raharja.ac.id/0414046805-susanto-rahardja/">Susanto Rahardja</a></li>
+<li class="page_item page-item-17690"><a href="https://raharja.ac.id/0418026506-sutrisno/">Sutrisno</a></li>
+<li class="page_item page-item-24698"><a href="https://raharja.ac.id/0416047808-suwarto/">Suwarto</a></li>
+<li class="page_item page-item-104"><a href="https://raharja.ac.id/teacher/">Teacher</a></li>
+<li class="page_item page-item-1456"><a href="https://raharja.ac.id/team-style-1/">Team (Style 1)</a></li>
+<li class="page_item page-item-1463"><a href="https://raharja.ac.id/team-style-2/">Team (Style 2)</a></li>
+<li class="page_item page-item-17564"><a href="https://raharja.ac.id/teknik-informatika/">Teknik Informatika</a></li>
+<li class="page_item page-item-15406"><a href="https://raharja.ac.id/tes-pengumuman/">tes pengumuman</a></li>
+<li class="page_item page-item-12030"><a href="https://raharja.ac.id/tes-sambutan/">tes sambutan</a></li>
+<li class="page_item page-item-15378"><a href="https://raharja.ac.id/tes-view-post-dosen/">tes view post dosen</a></li>
+<li class="page_item page-item-15381"><a href="https://raharja.ac.id/tes-view-post-lkm/">tes view post LKM</a></li>
+<li class="page_item page-item-15387"><a href="https://raharja.ac.id/tes-view-post-prodi/">tes view post prodi</a></li>
+<li class="page_item page-item-11814"><a href="https://raharja.ac.id/testimoni/">TESTIMONI</a></li>
+<li class="page_item page-item-1459"><a href="https://raharja.ac.id/testimonials-style-1/">Testimonials (Style 1)</a></li>
+<li class="page_item page-item-1466"><a href="https://raharja.ac.id/testimonials-style-2/">Testimonials (Style 2)</a></li>
+<li class="page_item page-item-12060"><a href="https://raharja.ac.id/testing/">testing</a></li>
+<li class="page_item page-item-24455"><a href="https://raharja.ac.id/0405127606-tri-cahyo-nugroho/">Tri Cahyo Nugroho</a></li>
+<li class="page_item page-item-17666"><a href="https://raharja.ac.id/0426088002-triyono/">Triyono</a></li>
+<li class="page_item page-item-12785"><a href="https://raharja.ac.id/triyono/">TRIYONO</a></li>
+<li class="page_item page-item-17782"><a href="https://raharja.ac.id/0401078903-turki-salim/">Turki Salim</a></li>
+<li class="page_item page-item-18730"><a href="https://raharja.ac.id/0406087902-tuti-nurhaeni/">Tuti Nurhaeni</a></li>
+<li class="page_item page-item-12475"><a href="https://raharja.ac.id/unit-kegiatan-mahasiswa/">Unit Kegiatan Mahasiswa</a></li>
+<li class="page_item page-item-9"><a href="https://raharja.ac.id/">Universitas Raharja</a></li>
+<li class="page_item page-item-18062"><a href="https://raharja.ac.id/0431036503-untung-rahardja/">Untung Rahardja</a></li>
+<li class="page_item page-item-12017"><a href="https://raharja.ac.id/user/">User</a></li>
+<li class="page_item page-item-15778"><a href="https://raharja.ac.id/useronline/">UserOnline</a></li>
+<li class="page_item page-item-12051"><a href="https://raharja.ac.id/users/">Users</a></li>
+<li class="page_item page-item-12052"><a href="https://raharja.ac.id/user-list-item/">Users List Item</a></li>
+<li class="page_item page-item-10501"><a href="https://raharja.ac.id/video-on-right/">Video on Right</a></li>
+<li class="page_item page-item-10505"><a href="https://raharja.ac.id/video-slider/">Video Slider</a></li>
+<li class="page_item page-item-11731"><a href="https://raharja.ac.id/visi-misi-universitas-raharja/">VISI MISI UNIVERSITAS RAHARJA</a></li>
+<li class="page_item page-item-3106"><a href="https://raharja.ac.id/visi-misi-tujuan/">Visi, Misi dan Tujuan</a></li>
+<li class="page_item page-item-3071"><a href="https://raharja.ac.id/visi-misi-tujuan-motto/">Visi, Misi, Tujuan, Motto</a></li>
+<li class="page_item page-item-17694"><a href="https://raharja.ac.id/9933000028-wahyu-hidayat/">Wahyu Hidayat</a></li>
+<li class="page_item page-item-18790"><a href="https://raharja.ac.id/9933000029-wahyu-hidayat/">Wahyu Hidayat</a></li>
+<li class="page_item page-item-24431"><a href="https://raharja.ac.id/0425118104-wahyu-manurian/">Wahyu Manurian</a></li>
+<li class="page_item page-item-24447"><a href="https://raharja.ac.id/0428119103-warseno/">Warseno</a></li>
+<li class="page_item page-item-16029"><a href="https://raharja.ac.id/webinar-prodi-diploma/">WEBINAR PRODI DIPLOMA</a></li>
+<li class="page_item page-item-16456"><a href="https://raharja.ac.id/webinar-prodi-mti/">Webinar Prodi MTI</a></li>
+<li class="page_item page-item-16036"><a href="https://raharja.ac.id/webinar-prodi-si-s1/">WEBINAR PRODI SI-S1</a></li>
+<li class="page_item page-item-16046"><a href="https://raharja.ac.id/webinar-prodi-sk-s1/">WEBINAR PRODI SK-S1</a></li>
+<li class="page_item page-item-16032"><a href="https://raharja.ac.id/webinar-prodi-ti-s1/">WEBINAR PRODI TI-S1</a></li>
+<li class="page_item page-item-18879"><a href="https://raharja.ac.id/0330106002-winarno/">Winarno</a></li>
+<li class="page_item page-item-17812"><a href="https://raharja.ac.id/09904212497-wiranti-sri-utami/">Wiranti Sri Utami</a></li>
+<li class="page_item page-item-24206"><a href="https://raharja.ac.id/00002-zakaria/">Zakaria</a></li>
+</ul></div>
+</div>
+<div id="cssmenu2" class="menu-one-page-menu-container">
+<ul id="menu-one-page-menu-1" class="menu">
+<li class="menu-item menu-item-type-custom menu-item-object-custom">
+<span>Email Pendaftaran</span> <strong><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7303031e113301121b120119125d1a1d151c">[email&#160;protected]</a></strong> </li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom">
+<span>Daftar Mahasiswa Baru</span> <strong><a href="https://web.whatsapp.com/send?phone=+628159146745&text=Hai *Universitas Raharja*, saya dapat rekomendasi dari *https://raharja.ac.id/*, saya butuh informasi lebih banyak lagi. Terimakasih UR.">0811-914-6745</a></strong> </li>
+</ul>
+</div>
+</div>
+<div class="offcanvas-overly"></div>
+
+<div id="content" class="site-content">
+
+<section class="breadcrumb-area d-flex  p-relative align-items-center">
+<div class="container">
+<div class="row align-items-center">
+<div class="col-xl-12 col-lg-12">
+<div class="breadcrumb-wrap text-left">
+<div class="breadcrumb-title">
+<h2>Mikrokontroler ESP32</h2>
+</div>
+</div>
+</div>
+<div class="breadcrumb-wrap2">
+<nav aria-label="breadcrumb">
+<ol class="breadcrumb">
+<li class="breadcrumb-item"><a href="https://raharja.ac.id/">Home</a></li>
+<li class="breadcrumb-item active" aria-current="page">Mikrokontroler ESP32</li>
+</ol>
+</nav>
+</div>
+</div>
+</div>
+</section>
+<div class="inner-blog b-details-p pt-120 pb-120 blog-deatails-box02">
+<div class="container">
+<div class="row">
+<div class="col-sm-12 col-md-12 col-lg-12">
+<div class="blog-deatails-box single">
+<article id="post-17236" class="post-17236 post type-post status-publish format-standard hentry category-home">
+<div class="bsingle__post mb-50">
+<div class="bsingle__post-thumb">
+<a href="https://raharja.ac.id/2021/11/16/mikrokontroler-esp32-3/">
+</a>
+</div>
+<div class="bsingle__content">
+<div class="meta-info">
+<ul>
+<li><i class="far fa-user"></i> By sulistio </li>
+<li><i class="fal fa-calendar-alt"></i> 16 November 2021 </li>
+<li><i class="far fa-comments"></i> No Comments </li>
+</ul>
+</div>
+<h2 class="single">Mikrokontroler ESP32</h2>
+<h4><img fetchpriority="high" decoding="async" class="aligncenter" src="https://www.ubuy.com.my/productimg/?image=aHR0cHM6Ly9tLm1lZGlhLWFtYXpvbi5jb20vaW1hZ2VzL0kvNjFSaXhTU3RHQkwuX1NMMTAwMF8uanBn.jpg" width="300" height="300" /></h4>
+<h4>Sejarah Mikrokontroler ESP32</h4>
+<p>ESP32 adalah salah satu keluarga mikrokontroler yang dikenalkan dan dikembangkan oleh Espressif System. ESP32 ini merupakan penerus dari mikrokontroller ESP8266. Mikrokontroler satu ini compatible dengan Arduino IDE. Pada mikrokontroler ini sudah tersedia modul WiFi dan ditambah dengan BLE (Bluetooth Low Energy) dalam chip sehingga sangat mendukung dan dapat menjadi pilihan bagus untuk membuat sistem aplikasi Internet of Things.</p>
+<p>&nbsp;</p>
+<h4>Spesifikasi Mikrokontroler ESP32</h4>
+<p><strong>Prosesor:</strong> Xtensa dual-core (or single-core) 32-bit LX6 microprocessor, operating at 160 or 240 MHz.<br/>
+<strong>Memori:</strong> 520 KB SRAM.<br/>
+<strong>Wireless connectivity:</strong> Wi-Fi 802.11 b/g/n, Bluetooth v4.2 BR/EDR and BLE (shares the radio with Wi-Fi).<br/>
+<strong>Peripheral I/O:</strong> 12-bit SAR ADC (up to 18 channels), 2x 8-bit DACs, 10x touch sensors (capacitive sensing GPIOs), 4x SPI, 2x I2S interfaces, 2x I2C interfaces, 3x UART, SD/SDIO/CE-ATA/MMC/eMMC host controller, SDIO/SPI slave controller, Ethernet MAC interface, CAN bus 2.0, infrared remote controller (TX/RX, up to 8 channels), motor PWM, LED PWM (up to 16 channels), hall effect sensor, ultra low power analog pre-amplifier.<br/>
+<strong>Security:</strong> IEEE 802.11 standard security, secure boot, flash encryption, 1024-bit OTP (up to 768-bit for customers), cryptographic hardware acceleration (AES, SHA-2, RSA, ECC), random number generator (RNG).</p>
+<p>&nbsp;</p>
+<h4>Software Pemrograman untuk Memprogram Mikrokontroler ESP32</h4>
+<ul>
+<li>IDE Arduino</li>
+<li>Pinout modul ESP32</li>
+<li>PlatformIO</li>
+<li>Framework Pengembangan IoT Espressif</li>
+<li>Plugin Eclipse ESP-IDF</li>
+<li>Ekstensi Kode Visual Studio ESP-IDF</li>
+</ul>
+<p>&nbsp;</p>
+<h4>Implementasi Mikrokontroler ESP32</h4>
+<ul>
+<li>Sistem Keamanan Rumah Berbasis IoT Menggunakan Mikrokontroler dan Telegram Sebagai Notifikasi, Keamanan rumah merupakan aspek penting dalam kehidupan, oleh kerena itu berbagai macam pengembangan teknologi dirancang untuk memberikan keamanan, bahkan melindungi aset yang dimiliki. Oleh sebab itu penulis merancang suatu sistem keamanan rumah berbasis IOT dengan menggunakan mikrokontroler yang dapat bermanfaat bagi orang yang sering berpergian keluar rumah. Suatu sistem kemanan rumah yang dirancang untuk mendeteksi gerakan didalam rumah menggunakan sensor PIR, setiap gerakan akan terdeteksi oleh sensor PIR kemudian Esp32 cam akan mengambil gambar sekaligus mengirim notifikasi ke pengguna melalui aplikasi Telegram</li>
+<li>Pemrograman ESP32 untuk Smart City 4.0 dan IOT, Salah satu kreasi mahasiswa Teknik Elektro Ubaya adalah membuat scale model implementasi smart city menggunakan ESP32 dan sensor seperti Gambar 1. Dilengkapi dengan modul Wi-Fi dalam chip, ESP32 adalah mikrokontroler yang dapat digunakan untuk mengaplikasikan Internet of Things. ESP32cam merupakan modul ESP32 yang dilengkapi dengan kamera. Sensor gas hanya mampu membaca data analog berupa gas, sehingga masih diperlukan mikrokontroler sebagai pengubah sinyal analog dari sensor ke data digital berupa deretan angka. Sensor HC-SR04 merupakan sensor yang mampu mendeteksi keberadaan objek didekatnya tanpa kontak fisik dan mengukur jarak objek tersebut. Sensor ini bekerja berdasarkan prinsip pantulan suatu gelombang ultrasonik sehingga dapat mengukur jarak suatu benda dengan frekuensi tertentu. Soil moisture sensor digunakan untuk mengukur kelembapan, dapat digunakan untuk mendeteksi kebocoran pipa. Sensor LDR (Light Dependent Resistor) atau photoresistor adalah komponen yang sensitif terhadap intensitas cahaya. RTC DS1302 adalah modul untuk menampilkan waktu secara real time.</li>
+</ul>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Sumber :</p>
+<ul>
+<li><a href="https://anakstei.id/pengenalan-mikrokontroler-esp32/">https://anakstei.id/pengenalan-mikrokontroler-esp32/</a></li>
+<li><a href="https://tech-id.netlify.app/articles/id522730/index.html">https://tech-id.netlify.app/articles/id522730/index.html</a></li>
+<li><a href="https://www.arduinoindonesia.id/2019/07/memulai-pemrograman-esp32-menggunakan.html">https://www.arduinoindonesia.id/2019/07/memulai-pemrograman-esp32-menggunakan.html</a></li>
+<li><a href="https://prosiding.senadi.upy.ac.id/index.php/senadi/article/download/222/196">https://prosiding.senadi.upy.ac.id/index.php/senadi/article/download/222/196</a></li>
+<li><a href="http://te.ubaya.ac.id/pemrograman-esp32-untuk-smart-city-4-0-dan-iot/">http://te.ubaya.ac.id/pemrograman-esp32-untuk-smart-city-4-0-dan-iot/</a></li>
+</ul>
+</div>
+</div>
+</article>
+<div class="tags">
+<div class="row">
+<div class="col-md-12 col-sm-12">
+<div class="post__tag">
+</div>
+</div>
+</div>
+</div>
+
+<div id="comments" class="comments-area  mt-45">
+<div id="respond" class="comment-respond">
+<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/2021/11/16/mikrokontroler-esp32-3/#respond" style="display:none;">Cancel reply</a></small></h3><p class="must-log-in">You must be <a href="https://raharja.ac.id/wp-login.php?redirect_to=https%3A%2F%2Fraharja.ac.id%2F2021%2F11%2F16%2Fmikrokontroler-esp32-3%2F">logged in</a> to post a comment.</p> </div>
+</div> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<footer class="footer-bg footer-p pt-90">
+<div class="footer-top pb-70 p-relative">
+
+<div class="content-lines-wrapper2">
+<div class="content-lines-inner2">
+<div class="content-lines2"></div>
+</div>
+</div>
+
+<div class="container">
+<div class="row justify-content-between">
+<div class="col-xl-4 col-lg-4 col-sm-6 redux-footer ">
+<ul class="footer-widget weight mb-30">
+<li id="text-3" class="widget widget_text"><h2 class="widgettitle">FAKULTAS EKONOMI DAN BISNIS</h2>
+<div class="textwidget"><p><a href="https://raharja.ac.id/akuntansi/">S1 – Akuntansi</a><br/>
+<a href="https://bisnisdigital.raharja.ac.id/">S1 – Bisnis Digital</a><br/>
+<a href="https://raharja.ac.id/#">S1 – Kewirausahaan</a><br/>
+<a href="https://raharja.ac.id/manajemen-retail/">S1 – Manajemen Retail</a></p>
+</div>
+</li>
+</ul>
+</div>
+<div class="col-xl-2 col-lg-2 col-sm-6 redux-footer">
+<ul class="footer-widget f-menu-content footer-link mb-30">
+<li id="text-6" class="widget widget_text"><h2 class="widgettitle">FAKULTAS SAINS DAN TEKNOLOGI</h2>
+<div class="textwidget"><p><a href="http://mti.raharja.ac.id/">S2 – Magister Teknik Informatika</a><br/>
+<a href="https://raharja.ac.id/fst-sarjana/">S1 – Pendidikan Teknologi Informasi</a><br/>
+<a href="https://raharja.ac.id/fst-sarjana/">S1 – Sains Data</a><br/>
+<a href="https://raharja.ac.id/sistem-informasi/">S1 – Sistem Informasi</a><br/>
+<a href="https://raharja.ac.id/fst-sarjana/">S1 – Sistem Komputer</a><br/>
+<a href="https://raharja.ac.id/teknik-informatika/">S1 – Teknik Informatika</a><br/>
+<a href="https://raharja.ac.id/fst-diploma/">D3 – Manajemen Informatika</a></p>
+</div>
+</li>
+</ul>
+</div>
+<div class="col-xl-3 col-lg-3 col-sm-6 redux-footer">
+<ul class="footer-widget f-menu-content footer-link mb-30">
+<li id="text-7" class="widget widget_text"><h2 class="widgettitle">CONTACT US</h2>
+<div class="textwidget"><ul>
+<li>JL. Jendral Sudirman No.40 Modern Cikokol Tangerang 15117</li>
+<li><a href="https://pmb.raharja.ac.id">www.pmb.raharja.ac.id</a></li>
+<li>WA : <a href="https://api.whatsapp.com/send?phone=628159146745&amp;text=Halo%20Mau%20tanya%20pendaftaran%20nih.....">08119146745</a></li>
+<li><i class="icon-phone6"></i>Tlp : 021 &#8211; 5529692, 5529586</li>
+<li><i class="icon-envelope4"></i>Fax. : 021 &#8211; 5529742</li>
+<li><a href="https://www.instagram.com/universitasraharja/">Instagram</a> | <a href="https://id-id.facebook.com/Campus.Raharja/">Facebook</a> | <a href="https://twitter.com/campus_raharja/">Twitter</a> | <a href="https://www.youtube.com/channel/UCjWfk136wljsVBGwt9foWcA">Youtube</a></li>
+</ul>
+<p><strong>LAYANAN</strong><br/>
+| <a href="https://raharja.ac.id/rme/">RME+</a> | <a href="https://rooster.raharja.info/">ROOSTER</a> | <a href="https://dosen.raharja.ac.id/">DOSEN</a> |<a href="https://widuri.raharja.info/">WIDURI</a>|<br/>
+| <a href="https://docs.google.com/forms/d/e/1FAIpQLSeDirx_BIK7UJVDdr4yCy_3vXgUbJKmJqsJABbib8sSFjAm7Q/viewform">iDUHelp!Offline</a> | <a href="https://sister.kemdikbud.go.id/">SISTER DOSEN </a> | <a href="https://edu.ieee.org/id-raharja/">IRSB</a> |</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="col-xl-3 col-lg-3 col-sm-6 redux-footer">
+<ul class="footer-widget weight footer-link mb-30">
+<li id="text-5" class="widget widget_text"><h2 class="widgettitle">Counter</h2>
+<div class="textwidget"><p><a href="https://info.flagcounter.com/vouy"><img decoding="async" src="https://s04.flagcounter.com/count2/vouy/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0" /></a></p>
+</div>
+</li>
+<li id="block-3" class="widget widget_block widget_text">
+<p></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="copyright-wrap">
+<div class="container">
+<div class="row align-items-center">
+<div class="col-lg-4">
+<div class="copy-text">
+<a href="https://raharja.ac.id/"> <img src="https://raharja.ac.id/wp-content/uploads/2020/10/logo-UR-putih-V2.png" alt="UR" title="Choice Campus for the better Future" /></a>
+</div>
+</div>
+<div class="col-lg-4 text-center">
+</div>
+<div class="col-lg-4 text-right text-xl-right">
+Copyright © Universitas Raharja 2023.
+</div>
+</div>
+</div>
+</div>
+</footer>
+
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="6db9a64c75103a5c900ed178-text/javascript">
+var sbiajaxurl = "https://raharja.ac.id/wp-admin/admin-ajax.php";
+</script>
+<script type="speculationrules">
+{"prerender":[{"source":"document","where":{"and":[{"href_matches":"\/*"},{"not":{"href_matches":["\/wp-login.php","\/wp-admin\/*","\/*\\?*(^|&)_wpnonce=*","\/wp-content\/uploads\/*","\/wp-content\/*","\/wp-content\/plugins\/*","\/wp-content\/themes\/qeducato\/*"]}},{"not":{"selector_matches":"a[rel=nofollow]"}},{"not":{"selector_matches":".no-prerender"}}]},"eagerness":"moderate"}]}
+</script>
+<script type="6db9a64c75103a5c900ed178-text/javascript">
+				const lazyloadRunObserver = () => {
+					const lazyloadBackgrounds = document.querySelectorAll( `.e-con.e-parent:not(.e-lazyloaded)` );
+					const lazyloadBackgroundObserver = new IntersectionObserver( ( entries ) => {
+						entries.forEach( ( entry ) => {
+							if ( entry.isIntersecting ) {
+								let lazyloadBackground = entry.target;
+								if( lazyloadBackground ) {
+									lazyloadBackground.classList.add( 'e-lazyloaded' );
+								}
+								lazyloadBackgroundObserver.unobserve( entry.target );
+							}
+						});
+					}, { rootMargin: '200px 0px 200px 0px' } );
+					lazyloadBackgrounds.forEach( ( lazyloadBackground ) => {
+						lazyloadBackgroundObserver.observe( lazyloadBackground );
+					} );
+				};
+				const events = [
+					'DOMContentLoaded',
+					'elementor/lazyload/observe',
+				];
+				events.forEach( ( event ) => {
+					document.addEventListener( event, lazyloadRunObserver );
+				} );
+			</script>
+<link rel="stylesheet" id="ays-pb-min-css" href="https://raharja.ac.id/wp-content/plugins/ays-popup-box/public/css/ays-pb-public-min.css?ver=4.5.0" type="text/css" media="all" />
+<script type="6db9a64c75103a5c900ed178-text/javascript" src="https://raharja.ac.id/wp-content/plugins/contact-form-7/includes/swv/js/index.js?ver=5.9.5" id="swv-js"></script>
+<script type="6db9a64c75103a5c900ed178-text/javascript" id="contact-form-7-js-extra">
+/* <![CDATA[ */
+var wpcf7 = {"api":{"root":"https:\/\/raharja.ac.id\/wp-json\/","namespace":"contact-form-7\/v1"}};
+/* ]]> */
+</script>
+<script type="6db9a64c75103a5c900ed178-text/javascript" src="https://raharja.ac.id/wp-content/plugins/contact-form-7/includes/js/index.js?ver=5.9.5" id="contact-form-7-js"></script>
+<script type="6db9a64c75103a5c900ed178-text/javascript" id="pt-cv-content-views-script-js-extra">
+/* <![CDATA[ */
+var PT_CV_PUBLIC = {"_prefix":"pt-cv-","page_to_show":"5","_nonce":"dc785d52ae","is_admin":"","is_mobile":"1","ajaxurl":"https:\/\/raharja.ac.id\/wp-admin\/admin-ajax.php","lang":"","loading_image_src":"data:image\/gif;base64,R0lGODlhDwAPALMPAMrKygwMDJOTkz09PZWVla+vr3p6euTk5M7OzuXl5TMzMwAAAJmZmWZmZszMzP\/\/\/yH\/C05FVFNDQVBFMi4wAwEAAAAh+QQFCgAPACwAAAAADwAPAAAEQvDJaZaZOIcV8iQK8VRX4iTYoAwZ4iCYoAjZ4RxejhVNoT+mRGP4cyF4Pp0N98sBGIBMEMOotl6YZ3S61Bmbkm4mAgAh+QQFCgAPACwAAAAADQANAAAENPDJSRSZeA418itN8QiK8BiLITVsFiyBBIoYqnoewAD4xPw9iY4XLGYSjkQR4UAUD45DLwIAIfkEBQoADwAsAAAAAA8ACQAABC\/wyVlamTi3nSdgwFNdhEJgTJoNyoB9ISYoQmdjiZPcj7EYCAeCF1gEDo4Dz2eIAAAh+QQFCgAPACwCAAAADQANAAAEM\/DJBxiYeLKdX3IJZT1FU0iIg2RNKx3OkZVnZ98ToRD4MyiDnkAh6BkNC0MvsAj0kMpHBAAh+QQFCgAPACwGAAAACQAPAAAEMDC59KpFDll73HkAA2wVY5KgiK5b0RRoI6MuzG6EQqCDMlSGheEhUAgqgUUAFRySIgAh+QQFCgAPACwCAAIADQANAAAEM\/DJKZNLND\/kkKaHc3xk+QAMYDKsiaqmZCxGVjSFFCxB1vwy2oOgIDxuucxAMTAJFAJNBAAh+QQFCgAPACwAAAYADwAJAAAEMNAs86q1yaWwwv2Ig0jUZx3OYa4XoRAfwADXoAwfo1+CIjyFRuEho60aSNYlOPxEAAAh+QQFCgAPACwAAAIADQANAAAENPA9s4y8+IUVcqaWJ4qEQozSoAzoIyhCK2NFU2SJk0hNnyEOhKR2AzAAj4Pj4GE4W0bkJQIAOw=="};
+var PT_CV_PAGINATION = {"first":"\u00ab","prev":"\u2039","next":"\u203a","last":"\u00bb","goto_first":"Go to first page","goto_prev":"Go to previous page","goto_next":"Go to next page","goto_last":"Go to last page","current_page":"Current page is","goto_page":"Go to page"};
+/* ]]> */
+</script>
+<script type="6db9a64c75103a5c900ed178-text/javascript" src="https://raharja.ac.id/wp-content/plugins/content-views-query-and-display-post-page/public/assets/js/cv.js?ver=3.8.0" id="pt-cv-content-views-script-js"></script>
+<script type="6db9a64c75103a5c900ed178-text/javascript" src="https://raharja.ac.id/wp-content/plugins/tabs-responsive/assets/js/tabs-custom.js?ver=6.5.5" id="wpsm_tabs_r_custom-js-front-js"></script>
+<script type="6db9a64c75103a5c900ed178-text/javascript" src="https://raharja.ac.id/wp-content/themes/qeducato/inc/assets/js/vendor/modernizr.js?ver=3.5.0" id="modernizr-js"></script>
+<script type="6db9a64c75103a5c900ed178-text/javascript" src="https://raharja.ac.id/wp-content/themes/qeducato/inc/assets/js/popper.min.js?ver=20181786" id="popper-js"></script>
+<script type="6db9a64c75103a5c900ed178-text/javascript" src="https://raharja.ac.id/wp-content/themes/qeducato/inc/assets/js/bootstrap.min.js?ver=20181786" id="bootstrap-js"></script>
+<script type="6db9a64c75103a5c900ed178-text/javascript" src="https://raharja.ac.id/wp-content/themes/qeducato/inc/assets/js/slick.min.js?ver=20181786" id="slick-js"></script>
+<script type="6db9a64c75103a5c900ed178-text/javascript" src="https://raharja.ac.id/wp-content/themes/qeducato/inc/assets/js/paroller.js?ver=20181786" id="paroller-js"></script>
+<script type="6db9a64c75103a5c900ed178-text/javascript" src="https://raharja.ac.id/wp-content/themes/qeducato/inc/assets/js/wow.min.js?ver=20181786" id="wow-js"></script>
+<script type="6db9a64c75103a5c900ed178-text/javascript" src="https://raharja.ac.id/wp-content/themes/qeducato/inc/assets/js/isotope.pkgd.min.js?ver=20181786" id="isotope-pkgd-js"></script>
+<script type="6db9a64c75103a5c900ed178-text/javascript" src="https://raharja.ac.id/wp-content/themes/qeducato/inc/assets/js/isotopeloaded.min.js?ver=20181786" id="isotopeloaded-js"></script>
+<script type="6db9a64c75103a5c900ed178-text/javascript" src="https://raharja.ac.id/wp-content/themes/qeducato/inc/assets/js/parallax.min.js?ver=20181786" id="parallax-js"></script>
+<script type="6db9a64c75103a5c900ed178-text/javascript" src="https://raharja.ac.id/wp-content/themes/qeducato/inc/assets/js/jquery.waypoints.min.js?ver=20181786" id="jquery-waypoints-js"></script>
+<script type="6db9a64c75103a5c900ed178-text/javascript" src="https://raharja.ac.id/wp-content/themes/qeducato/inc/assets/js/jquery.countdown.min.js?ver=20181786" id="jquery-countdown-js"></script>
+<script type="6db9a64c75103a5c900ed178-text/javascript" src="https://raharja.ac.id/wp-content/themes/qeducato/inc/assets/js/jquery.counterup.min.js?ver=20181786" id="jquery-counterup-js"></script>
+<script type="6db9a64c75103a5c900ed178-text/javascript" src="https://raharja.ac.id/wp-content/themes/qeducato/inc/assets/js/jquery.scrollUp.min.js?ver=20181786" id="jquery-scrollUp-js"></script>
+<script type="6db9a64c75103a5c900ed178-text/javascript" src="https://raharja.ac.id/wp-content/themes/qeducato/inc/assets/js/parallax-scroll.js?ver=20181786" id="parallax-scroll-js"></script>
+<script type="6db9a64c75103a5c900ed178-text/javascript" src="https://raharja.ac.id/wp-content/themes/qeducato/inc/assets/js/typed.js?ver=20181786" id="typed-js"></script>
+<script type="6db9a64c75103a5c900ed178-text/javascript" src="https://raharja.ac.id/wp-content/themes/qeducato/inc/assets/js/jquery.meanmenu.min.js?ver=20181786" id="jquery-meanmenu-js"></script>
+<script type="6db9a64c75103a5c900ed178-text/javascript" src="https://raharja.ac.id/wp-content/themes/qeducato/inc/assets/js/jquery.magnific-popup.min.js?ver=20181786" id="jquery-magnific-popup-js"></script>
+<script type="6db9a64c75103a5c900ed178-text/javascript" src="https://raharja.ac.id/wp-content/themes/qeducato/inc/assets/js/element-in-view.js?ver=20181786" id="element-in-view-js"></script>
+<script type="6db9a64c75103a5c900ed178-text/javascript" src="https://raharja.ac.id/wp-content/themes/qeducato/inc/assets/js/main.js?ver=20181786" id="qeducato-main-js"></script>
+<script type="6db9a64c75103a5c900ed178-text/javascript" src="https://raharja.ac.id/wp-includes/js/comment-reply.min.js?ver=6.5.5" id="comment-reply-js" async="async" data-wp-strategy="async"></script>
+<script type="6db9a64c75103a5c900ed178-text/javascript" src="https://raharja.ac.id/wp-content/plugins/youtube-embed-plus/scripts/fitvids.min.js?ver=14.2.1.2" id="__ytprefsfitvids__-js"></script>
+<script type="6db9a64c75103a5c900ed178-text/javascript" src="https://raharja.ac.id/wp-content/plugins/mystickyelements/js/jquery.cookie.js?ver=2.1.7" id="mystickyelements-cookie-js-js" defer="defer" data-wp-strategy="defer"></script>
+<script type="6db9a64c75103a5c900ed178-text/javascript" src="https://raharja.ac.id/wp-content/plugins/mystickyelements/js/mailcheck.js?ver=2.1.7" id="mailcheck-js-js" defer="defer" data-wp-strategy="defer"></script>
+<script type="6db9a64c75103a5c900ed178-text/javascript" src="https://raharja.ac.id/wp-content/plugins/mystickyelements/js/jquery.email-autocomplete.js?ver=2.1.7" id="autocomplete-email-js-js" defer="defer" data-wp-strategy="defer"></script>
+<script type="6db9a64c75103a5c900ed178-text/javascript" id="mystickyelements-fronted-js-js-extra">
+/* <![CDATA[ */
+var mystickyelements = {"ajaxurl":"https:\/\/raharja.ac.id\/wp-admin\/admin-ajax.php","ajax_nonce":"9b3a5691d9"};
+/* ]]> */
+</script>
+<script type="6db9a64c75103a5c900ed178-text/javascript" src="https://raharja.ac.id/wp-content/plugins/mystickyelements/js/mystickyelements-fronted.min.js?ver=2.1.7" id="mystickyelements-fronted-js-js" defer="defer" data-wp-strategy="defer"></script>
+<script type="6db9a64c75103a5c900ed178-text/javascript" id="intl-tel-input-js-js-extra">
+/* <![CDATA[ */
+var mystickyelement_obj = {"plugin_url":"https:\/\/raharja.ac.id\/wp-content\/plugins\/mystickyelements\/"};
+/* ]]> */
+</script>
+<script type="6db9a64c75103a5c900ed178-text/javascript" src="https://raharja.ac.id/wp-content/plugins/mystickyelements/intl-tel-input-src/build/js/intlTelInput.js?ver=2.1.7" id="intl-tel-input-js-js" defer="defer" data-wp-strategy="defer"></script>
+<script type="6db9a64c75103a5c900ed178-text/javascript" id="gt_widget_script_76957962-js-before">
+/* <![CDATA[ */
+window.gtranslateSettings = /* document.write */ window.gtranslateSettings || {};window.gtranslateSettings['76957962'] = {"default_language":"id","languages":["en","id"],"url_structure":"none","flag_style":"2d","flag_size":16,"alt_flags":[],"flags_location":"\/wp-content\/plugins\/gtranslate\/flags\/"};
+/* ]]> */
+</script><script src="https://raharja.ac.id/wp-content/plugins/gtranslate/js/base.js?ver=6.5.5" data-no-optimize="1" data-no-minify="1" data-gt-orig-url="/2021/11/16/mikrokontroler-esp32-3/" data-gt-orig-domain="raharja.ac.id" data-gt-widget-id="76957962" defer type="6db9a64c75103a5c900ed178-text/javascript"></script> <div class="mystickyelements-fixed mystickyelements-position-right mystickyelements-position-screen-center mystickyelements-position-mobile-right mystickyelements-on-hover mystickyelements-size-medium mystickyelements-mobile-size-medium mystickyelements-entry-effect-slide-in mystickyelements-templates-default">
+<div class="mystickyelement-lists-wrap">
+<ul class="mystickyelements-lists mysticky">
+<li class="mystickyelements-minimize ">
+<span class="mystickyelements-minimize minimize-position-right minimize-position-mobile-right" style="background: #000000">
+&rarr; </span>
+</li>
+<li id="mystickyelements-social-whatsapp" class="mystickyelements-social-icon-li mystickyelements-social-whatsapp  element-desktop-on element-mobile-on">
+<style>
+																					</style>
+<span class="mystickyelements-social-icon social-whatsapp social-custom" data-tab-setting="hover" data-click="0" data-mobile-behavior="disable" data-flyout="enable" style="background: #17ea00">
+<a href="https://wa.me/+628119146745?text=Hai%20*Universitas%20Raharja*,%20saya%20dapat%20rekomendasi%20dari%20*https://raharja.ac.id/*,%20saya%20butuh%20informasi%20lebih%20banyak%20lagi.%20Terimakasih%20UR." data-url="https://wa.me/+628119146745?text=Hai%20*Universitas%20Raharja*,%20saya%20dapat%20rekomendasi%20dari%20*https://raharja.ac.id/*,%20saya%20butuh%20informasi%20lebih%20banyak%20lagi.%20Terimakasih%20UR." data-tab-setting="hover" data-mobile-behavior="disable" data-flyout="enable" title="Pendaftaran Mahasiswa Baru">
+<i class="fab fa-whatsapp"></i>
+</a>
+</span>
+<span class="mystickyelements-social-text " style="background: #17ea00;">
+<a href="https://wa.me/+628119146745?text=Hai%20*Universitas%20Raharja*,%20saya%20dapat%20rekomendasi%20dari%20*https://raharja.ac.id/*,%20saya%20butuh%20informasi%20lebih%20banyak%20lagi.%20Terimakasih%20UR." data-tab-setting="hover" data-flyout="enable" title="Pendaftaran Mahasiswa Baru">
+Pendaftaran Mahasiswa Baru </a>
+</span>
+</li>
+<li id="mystickyelements-social-address" class="mystickyelements-social-icon-li mystickyelements-social-address  element-desktop-on element-mobile-on">
+<style>
+																					</style>
+<span class="mystickyelements-social-icon social-address social-custom" data-tab-setting="hover" data-click="0" data-mobile-behavior="disable" data-flyout="enable" style="background: #9e02ed">
+<i class="fas fa-map-marker-alt" style="color:#ffffff"></i>
+</span>
+<span class="mystickyelements-social-text mystickyelements-social-no-link" style="background: #9e02ed;color: #ffffff;">
+Alamat :: JL. Jendral Sudirman No.40 Modern Cikokol Tangerang 15117 </span>
+</li>
+</ul>
+</div>
+</div>
+<script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="6db9a64c75103a5c900ed178-|49" defer></script><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'8aeb2349ce9c4115',t:'MTcyMjkwNjUyOC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
